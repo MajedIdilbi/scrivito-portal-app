@@ -8,8 +8,8 @@ import { Loading } from '../../Components/Loading'
 provideComponent(
   DataWidget,
   ({ widget }) => {
-    const dataScope = useData()
     const { limit } = useContext(DataBatchContext)
+    const dataScope = useData().transform({ limit })
 
     if (dataScope.isEmpty()) {
       return <EditorNote>Data is empty.</EditorNote>
@@ -17,18 +17,15 @@ provideComponent(
 
     return (
       <>
-        {dataScope
-          .transform({ limit })
-          .take()
-          .map((dataItem) => (
-            <ContentTag
-              content={widget}
-              attribute="content"
-              className="col"
-              dataContext={dataItem}
-              key={dataItem.id()}
-            />
-          ))}
+        {dataScope.take().map((dataItem) => (
+          <ContentTag
+            content={widget}
+            attribute="content"
+            className="col"
+            dataContext={dataItem}
+            key={dataItem.id()}
+          />
+        ))}
       </>
     )
   },
