@@ -11,6 +11,15 @@ provideComponent(
     const { limit } = useContext(DataBatchContext)
     const dataScope = useData().transform({ limit })
 
+    const dataError = dataScope.getError()
+    if (dataError) {
+      return (
+        <EditorNote>
+          An communication error occurred: {dataError.message}
+        </EditorNote>
+      )
+    }
+
     if (dataScope.isEmpty()) {
       return <EditorNote>The data column list is empty.</EditorNote>
     }
