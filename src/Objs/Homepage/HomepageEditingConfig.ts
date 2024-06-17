@@ -57,7 +57,6 @@ provideEditingConfig(Homepage, {
         'siteSearchResultsPage',
         'siteUserProfilePage',
       ].filter((p): p is string => typeof p === 'string'),
-      key: 'site-settings-group',
     },
   ],
   properties: ['title', 'metaDataDescription'],
