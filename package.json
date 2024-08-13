@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build": "vite build",
+    "build": "vite build && SCRIVITO_ORIGIN=https://prerendered.scrivito-portal-app.pages.dev vite-node --options.deps.external='/scrivito/' src/prerenderContent.ts && rm -rf dist && mv dist-ssr dist",
     "types": "tsc",
     "preview": "vite preview",
     "lint": "eslint --max-warnings 0 'src/**/*.ts' 'src/**/*.tsx' && knip",

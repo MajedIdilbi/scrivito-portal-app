@@ -1,6 +1,4 @@
 const preferIndex =
-  // https://developers.cloudflare.com/pages/configuration/build-configuration/
-  process.env.CF_PAGES === '1' ||
   // https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-env-vars.html
   !!process.env.CODEBUILD_BUILD_ID
 
