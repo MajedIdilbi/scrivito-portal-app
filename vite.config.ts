@@ -17,6 +17,12 @@ export default defineConfig(({ mode }) => {
   const enablePisa = env.ENABLE_PISA === 'true'
 
   return {
+    resolve: {
+      alias: {
+        '~@justrelate': resolve(__dirname, 'node_modules/@justrelate'),
+        '@': resolve(__dirname, './src'),
+      },
+    },
     build: {
       outDir,
       rollupOptions: {

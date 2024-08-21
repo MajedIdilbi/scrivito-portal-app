@@ -17,6 +17,7 @@
     "start": "vite"
   },
   "dependencies": {
+    "@justrelate/jr-ui-components": "^0.0.25-delta",
     "color": "^4.2.3",
     "highlight-words-core": "^1.2.2",
     "history": "^5.3.0",

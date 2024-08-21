@@ -1,0 +1,35 @@
+import { provideDataValues } from '../../utils/dataValuesConfig'
+import { Company } from './CompanyDataClass'
+
+provideDataValues(Company, {
+  status: [
+    'PSA_SVC_C8D_ACQ',
+    'PSA_SVC_C8D_CLS',
+    'PSA_SVC_C8D_DCS',
+    'PSA_SVC_C8D_DON',
+    'PSA_SVC_C8D_DSP',
+    'PSA_SVC_C8D_FLW',
+    'PSA_SVC_C8D_NBE',
+    'PSA_SVC_CAL_ACQ',
+    'PSA_SVC_CAL_CLS',
+    'PSA_SVC_CAL_FRW',
+    'PSA_SVC_CAL_WRK',
+    'PSA_SVC_CPL_ACQ',
+    'PSA_SVC_CPL_CLS',
+    'PSA_SVC_CPL_DCS',
+    'PSA_SVC_CPL_DON',
+    'PSA_SVC_CPL_FLW',
+    'PSA_SVC_CPL_ORD',
+    'PSA_SVC_SUP_CPL_ASQ',
+    'PSA_SVC_SUP_CPL_BEA',
+    'PSA_SVC_SUP_CPL_ERL',
+    'PSA_SVC_SUP_CPL_RUE',
+    'PSA_SVC_SUP_CPL_SEN',
+    'PSA_SVC_TRB_ACQ',
+    'PSA_SVC_TRB_CLS',
+    'PSA_SVC_TRB_DCS',
+    'PSA_SVC_TRB_DON',
+    'PSA_SVC_TRB_DSP',
+  ],
+  type: ['PSA_SVC_CAL', 'PSA_SVC_CPL', 'PSA_SVC_TRB'],
+})
