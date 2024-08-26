@@ -5,6 +5,8 @@ import {
   Obj,
   provideLayoutComponent,
 } from 'scrivito'
+import classnames from 'classnames'
+import { useSidebarContext } from '@/Components/SidebarContext'
 
 type ObjClass = Parameters<typeof provideLayoutComponent>[0]
 
@@ -23,15 +25,7 @@ export function provideDefaultPageLayoutComponent(objClass: ObjClass) {
         <BackgroundWrapper
           backgroundColor={page.get('layoutMainBackgroundColor')}
         >
-          {showSidebar ? (
-            <SidebarLayout
-              page={page}
-              showLeftSidebar={showLeftSidebar}
-              showRightSidebar={showRightSidebar}
-            />
-          ) : (
-            <CurrentPage />
-          )}
+          {showSidebar ? <SidebarLayout page={page} /> : <CurrentPage />}
         </BackgroundWrapper>
 
         {!!page.get('layoutShowFooter') && (
@@ -55,46 +49,22 @@ const BackgroundWrapper = connect(function BackgroundWrapper({
   return <section className={`bg-${backgroundColor}`}>{children}</section>
 })
 
-const SidebarLayout = connect(function SidebarLayout({
-  page,
-  showLeftSidebar,
-  showRightSidebar,
-}: {
-  page: Obj
-  showLeftSidebar: boolean
-  showRightSidebar: boolean
-}) {
+const SidebarLayout = connect(function SidebarLayout({ page }: { page: Obj }) {
+  const { isOpen } = useSidebarContext()
   return (
-    <div className="container py-2">
-      <div className="row">
-        {showLeftSidebar && (
-          <div className="col-lg-2 order-first">
-            <ContentTag
-              tag="aside"
-              content={page}
-              attribute="layoutLeftSidebar"
-            />
-          </div>
-        )}
-
-        <div
-          className={
-            showLeftSidebar && showRightSidebar ? 'col-lg-8' : 'col-lg-10'
-          }
-        >
+    <div
+      className={classnames('jr-main-wrapper', {
+        'jr-sidebar-left-show': isOpen,
+      })}
+    >
+      <div className="jr-sidebar-left">
+        <ContentTag content={page} attribute="layoutLeftSidebar" />
+      </div>
+      <main>
+        <div className="container-fluid">
           <CurrentPage />
         </div>
-
-        {showRightSidebar && (
-          <div className="col-lg-2 order-first order-lg-last">
-            <ContentTag
-              tag="aside"
-              content={page}
-              attribute="layoutRightSidebar"
-            />
-          </div>
-        )}
-      </div>
+      </main>
     </div>
   )
 })

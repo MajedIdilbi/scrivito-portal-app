@@ -19,6 +19,7 @@
     }
   },
   "rules": {
+    "import/no-unresolved": "off",
     "curly": ["error", "multi-line"],
     "quotes": [
       "warn",

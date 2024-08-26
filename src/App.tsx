@@ -9,6 +9,7 @@ import { ErrorBoundary } from './Components/ErrorBoundary'
 import { NotFoundErrorPage } from './Components/NotFoundErrorPage'
 import { Toasts } from './Components/Toasts'
 import { DesignAdjustments } from './Components/DesignAdjustments'
+import { SidebarContextProvider } from './Components/SidebarContext'
 
 export const helmetContext: { helmet?: HelmetServerState } = {}
 
@@ -20,18 +21,17 @@ export function App({
   return (
     <HelmetProvider context={helmetContext}>
       <ErrorBoundary>
-        <div ref={appWrapperRef}>
-          <a href="#main" className="btn skip-to-content">
-            Skip to Content
-          </a>
-          <CurrentPage />
-          <ScrivitoNotFoundErrorPage>
-            <NotFoundErrorPage />
-          </ScrivitoNotFoundErrorPage>
-          <CurrentPageMetadata />
-          <Toasts />
-          <DesignAdjustments />
-        </div>
+        <SidebarContextProvider>
+          <div ref={appWrapperRef}>
+            <CurrentPage />
+            <ScrivitoNotFoundErrorPage>
+              <NotFoundErrorPage />
+            </ScrivitoNotFoundErrorPage>
+            <CurrentPageMetadata />
+            <Toasts />
+            <DesignAdjustments />
+          </div>
+        </SidebarContextProvider>
       </ErrorBoundary>
     </HelmetProvider>
   )

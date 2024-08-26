@@ -2,6 +2,7 @@ import { provideComponent, currentUser } from 'scrivito'
 
 import { DXPTopNavWidget } from './DXPTopNavWidgetClass'
 import { ProfileMenu } from '@justrelate/jr-ui-components/ProfileMenu'
+import { SidebarToggler } from '@/Components/SidebarContext'
 import { SearchBar } from './SubComponent/searchBar/SearchBar'
 
 provideComponent(DXPTopNavWidget, () => {
@@ -9,7 +10,9 @@ provideComponent(DXPTopNavWidget, () => {
 
   return (
     <div className="jr-topbar">
-      <div title={user?.name()} className="jr-buttonbar jr-brand-neodxp"></div>
+      <SidebarToggler />
+
+      <div title={user?.name()} className="jr-buttonbar jr-brand-neodxp" />
 
       <SearchBar />
 
