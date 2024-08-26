@@ -39,11 +39,7 @@ function hydrateApp() {
   hydrateRoot(
     document.getElementById('root') as HTMLElement,
     <StrictMode>
-      <App
-        appWrapperRef={(el) => {
-          if (el) updateContent()
-        }}
-      />
+      <App />
     </StrictMode>,
   )
 }
