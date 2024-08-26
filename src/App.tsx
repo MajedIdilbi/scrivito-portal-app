@@ -13,24 +13,18 @@ import { SidebarContextProvider } from './Components/SidebarContext'
 
 export const helmetContext: { helmet?: HelmetServerState } = {}
 
-export function App({
-  appWrapperRef,
-}: {
-  appWrapperRef?: React.RefCallback<HTMLElement>
-}) {
+export function App() {
   return (
     <HelmetProvider context={helmetContext}>
       <ErrorBoundary>
         <SidebarContextProvider>
-          <div ref={appWrapperRef}>
-            <CurrentPage />
-            <ScrivitoNotFoundErrorPage>
-              <NotFoundErrorPage />
-            </ScrivitoNotFoundErrorPage>
-            <CurrentPageMetadata />
-            <Toasts />
-            <DesignAdjustments />
-          </div>
+          <CurrentPage />
+          <ScrivitoNotFoundErrorPage>
+            <NotFoundErrorPage />
+          </ScrivitoNotFoundErrorPage>
+          <CurrentPageMetadata />
+          <Toasts />
+          <DesignAdjustments />
         </SidebarContextProvider>
       </ErrorBoundary>
     </HelmetProvider>
