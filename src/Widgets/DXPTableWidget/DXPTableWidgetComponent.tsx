@@ -53,13 +53,3 @@ provideComponent(DXPTableWidget, ({ widget }) => {
     </div>
   )
 })
-
-// provideComponent(TableHeader, ({ widget }) => (
-//   <WidgetTag tag="thead">
-//     <ContentTag tag="tr" content={widget} attribute="headers"></ContentTag>
-//   </WidgetTag>
-// ))
-
-// provideComponent(TableHeaderCell, ({ widget }) => (
-//   <ContentTag content={widget} tag="th" attribute="title" />
-// ))
