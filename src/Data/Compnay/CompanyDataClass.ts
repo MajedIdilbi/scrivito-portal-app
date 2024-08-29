@@ -1,10 +1,24 @@
 import { DataClassAttributes } from '../types'
-import { pisaTicketDataClass } from './Pisa/pisaCompanyDataClass'
+import { pisaCompanyDataClass } from './Pisa/pisaCompanyDataClass'
 
 const attributes: DataClassAttributes = {
+  group: 'string',
+  branch: 'string',
+  region: 'string',
   name: 'string',
-  email: 'string',
+  number: 'string',
+  status: 'string',
+  accountManager: 'string',
+  since: 'string',
+  occasion: 'string',
+  addressStreet: 'string',
+  addressPostalCode: 'number',
+  addressCity: 'string',
+  addressCountry: 'string',
   phone: 'string',
+  email: 'string',
+  url: 'string',
+  description: 'string',
 }
 
-export const Company = pisaTicketDataClass(attributes)
+export const Company = pisaCompanyDataClass(attributes)

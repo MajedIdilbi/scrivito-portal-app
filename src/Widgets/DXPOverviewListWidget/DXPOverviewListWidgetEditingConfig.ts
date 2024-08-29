@@ -5,7 +5,7 @@ import { DataTableWidget } from '../DataTableWidget/DataTableWidgetClass'
 import { TextTableWidget } from '../TextTableWidget/TextTableWidgetClass'
 
 provideEditingConfig(DXPOverviewListWidget, {
-  title: 'DXPOverviewListWidget',
+  title: 'DXP Overview List Widget',
   thumbnail: Thumbnail,
   initialContent: {
     content: [

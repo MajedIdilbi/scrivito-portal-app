@@ -32,7 +32,6 @@ provideComponent(
           <div className="col-sm-12">
             <div className="card">
               <div className="responsive-stacked">
-
                 <table className="table table-hover mb-0">
                   <thead>
                     <ContentTag
@@ -43,7 +42,6 @@ provideComponent(
                     />
                   </thead>
                   <tbody>
-
                     {dataItems.map((dataItem) => (
                       <ContentTag
                         content={widget}
@@ -54,10 +52,8 @@ provideComponent(
                         tag="tr"
                       />
                     ))}
-
                   </tbody>
                 </table>
-
               </div>
             </div>
           </div>
