@@ -29,6 +29,7 @@
     "react-dom": "^18.3.1",
     "react-draggable": "^4.4.6",
     "react-helmet-async": "^2.0.5",
+    "react-hook-form": "^7.53.0",
     "react-toastify": "^10.0.5",
     "scrivito": "^1.43.0",
     "scrivito-neoletter-form-widgets": "^0.0.19",

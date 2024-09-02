@@ -1,13 +1,24 @@
-import { ContentTag, DataItem, provideComponent, useData } from 'scrivito'
+import {
+  DataItem,
+  LinkTag,
+  navigateTo,
+  Obj,
+  provideComponent,
+  useData,
+} from 'scrivito'
+
+import { Table } from '@justrelate/jr-ui-components/Table'
+import { Button } from '@justrelate/jr-ui-components/Button'
+import { BottomBar } from '@justrelate/jr-ui-components'
 
 import { DataErrorEditorNote } from '@/Components/DataErrorEditorNote'
 import { EditorNote } from '@/Components/EditorNote'
 
 import { DXPOrganizationsWidget } from './DXPOrganizationsTableWidgetClass'
-import { Table } from '@justrelate/jr-ui-components'
 import { ensureString } from '@/utils/ensureString'
+import { Nav } from 'react-bootstrap'
 
-provideComponent(DXPOrganizationsWidget, ({ widget }) => {
+provideComponent(DXPOrganizationsWidget, () => {
   const dataScope = useData()
   let dataError: unknown
 
@@ -29,6 +40,8 @@ provideComponent(DXPOrganizationsWidget, ({ widget }) => {
 
   if (dataError) return <DataErrorEditorNote error={dataError} />
 
+  const organizationAddPage = Obj.getByPermalink('organization-add-page')
+
   return (
     <div className="row">
       <div className="col-sm-12">
@@ -46,6 +59,17 @@ provideComponent(DXPOrganizationsWidget, ({ widget }) => {
           </Table>
         </div>
       </div>
+
+      <BottomBar>
+        <Button
+          variant="primary"
+          onClick={() =>
+            navigateTo(() => Obj.getByPermalink('organization-add-page'))
+          }
+        >
+          Add
+        </Button>
+      </BottomBar>
     </div>
   )
 })

@@ -52,19 +52,22 @@ const BackgroundWrapper = connect(function BackgroundWrapper({
 const SidebarLayout = connect(function SidebarLayout({ page }: { page: Obj }) {
   const { isOpen } = useSidebarContext()
   return (
-    <div
-      className={classnames('jr-main-wrapper', {
-        'jr-sidebar-left-show': isOpen,
-      })}
-    >
-      <div className="jr-sidebar-left">
-        <ContentTag content={page} attribute="layoutLeftSidebar" />
-      </div>
-      <main>
-        <div className="container-fluid">
-          <CurrentPage />
+    <>
+      <div
+        className={classnames('jr-main-wrapper', {
+          'jr-sidebar-left-show': isOpen,
+        })}
+      >
+        <div className="jr-sidebar-left">
+          <ContentTag content={page} attribute="layoutLeftSidebar" />
         </div>
-      </main>
-    </div>
+        <main>
+          <div className="container-fluid">
+            <CurrentPage />
+          </div>
+        </main>
+      </div>
+      <div id="bottombar-container" />
+    </>
   )
 })
