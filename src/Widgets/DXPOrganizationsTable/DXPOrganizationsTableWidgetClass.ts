@@ -5,6 +5,7 @@ export const DXPOrganizationsWidget = provideWidgetClass(
   {
     attributes: {
       data: 'datalocator',
+      link: 'link',
     },
   },
 )

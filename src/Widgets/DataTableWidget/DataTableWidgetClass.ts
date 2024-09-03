@@ -2,9 +2,7 @@ import { provideWidgetClass } from 'scrivito'
 
 export const DataTableWidget = provideWidgetClass('DataTableWidget', {
   attributes: {
-    label: 'string',
     data: 'datalocator',
-    details: 'string',
     showAs: ['enum', { values: ['text', 'currency', 'datetime', 'link'] }],
     datetimeFormat: ['enum', { values: ['date', 'datetime', 'relative'] }],
     valueSize: [

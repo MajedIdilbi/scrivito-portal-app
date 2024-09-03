@@ -41,7 +41,6 @@ provideEditingConfig(DataTableWidget, {
     ].filter((p): p is string => typeof p === 'string'),
   initialContent: {
     datetimeFormat: 'date',
-    label: 'Label',
     marginBottom: false,
     showAs: 'text',
     valueSize: 'body-font-size',
