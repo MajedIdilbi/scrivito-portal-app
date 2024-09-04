@@ -18,7 +18,8 @@ import { DXPOrganizationsWidget } from './DXPOrganizationsTableWidgetClass'
 import { ensureString } from '@/utils/ensureString'
 import { Nav } from 'react-bootstrap'
 
-provideComponent(DXPOrganizationsWidget, () => {
+provideComponent(DXPOrganizationsWidget, ({ widget }) => {
+  const link = widget.get('link')
   const dataScope = useData()
   let dataError: unknown
 
@@ -54,6 +55,15 @@ provideComponent(DXPOrganizationsWidget, () => {
                     {ensureString(dataItem.get(e.accessor))}
                   </td>
                 ))}
+                <td /* className="visually-hidden visually-hidden-focusable" */>
+                  {/* <LinkTag to={link}>{"Details"}</LinkTag> */}
+                  {/* <LinkTag to={dataItem}>{"Details"}</LinkTag> */}
+                  <Nav.Link
+                    href={"organization-details-page?company_id="+dataItem.get("_id")}
+                  >
+                    Details
+                  </Nav.Link>
+                </td>
               </tr>
             ))}
           </Table>
