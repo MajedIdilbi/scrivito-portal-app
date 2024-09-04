@@ -5,5 +5,4 @@ import Thumbnail from './thumbnail.svg'
 provideEditingConfig(DXPOrganizationsWidget, {
   title: 'DXP Organizations Table',
   thumbnail: Thumbnail,
-  properties: ['link'],
 })

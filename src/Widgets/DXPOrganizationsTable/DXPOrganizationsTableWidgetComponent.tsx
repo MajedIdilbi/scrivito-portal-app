@@ -5,6 +5,7 @@ import {
   Obj,
   provideComponent,
   useData,
+  urlForDataItem,
 } from 'scrivito'
 
 import { Table } from '@justrelate/jr-ui-components/Table'
@@ -19,7 +20,6 @@ import { ensureString } from '@/utils/ensureString'
 import { Nav } from 'react-bootstrap'
 
 provideComponent(DXPOrganizationsWidget, ({ widget }) => {
-  const link = widget.get('link')
   const dataScope = useData()
   let dataError: unknown
 
@@ -49,20 +49,19 @@ provideComponent(DXPOrganizationsWidget, ({ widget }) => {
         <div className="card">
           <Table columns={tableCols} className="mb-0">
             {dataItems.map((dataItem) => (
-              <tr key={dataItem.id()}>
+              <tr
+                key={dataItem.id()}
+                className="cursor-pointer"
+                onClick={() => navigateTo(dataItem)
+              }>
                 {tableCols.map((e) => (
                   <td key={e.accessor}>
                     {ensureString(dataItem.get(e.accessor))}
                   </td>
                 ))}
-                <td /* className="visually-hidden visually-hidden-focusable" */>
-                  {/* <LinkTag to={link}>{"Details"}</LinkTag> */}
-                  {/* <LinkTag to={dataItem}>{"Details"}</LinkTag> */}
-                  <Nav.Link
-                    href={"organization-details-page?company_id="+dataItem.get("_id")}
-                  >
-                    Details
-                  </Nav.Link>
+                <td className="visually-hidden visually-hidden-focusable">
+                  {/* <LinkTag to={dataItem} /> */}
+                  <a href={urlForDataItem(dataItem) as any} />
                 </td>
               </tr>
             ))}
@@ -74,7 +73,7 @@ provideComponent(DXPOrganizationsWidget, ({ widget }) => {
         <Button
           variant="primary"
           onClick={() =>
-            navigateTo(() => Obj.getByPermalink('organization-add-page'))
+            navigateTo(() => organizationAddPage)
           }
         >
           Add
