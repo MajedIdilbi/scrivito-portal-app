@@ -3,7 +3,7 @@ import { DXPPageSubtitleWidget } from './DXPPageSubtitleWidgetClass'
 import Thumbnail from './thumbnail.svg'
 
 provideEditingConfig(DXPPageSubtitleWidget, {
-  title: 'DXPPageSubtitle',
+  title: 'DXP Page Subtitle',
   thumbnail: Thumbnail,
   attributes: {
     text: {

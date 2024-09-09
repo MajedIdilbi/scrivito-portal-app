@@ -12,7 +12,7 @@ const attributes: DataClassAttributes = {
   since: 'string',
   occasion: 'string',
   addressStreet: 'string',
-  addressPostalCode: 'number',
+  addressPostalCode: 'string',
   addressCity: 'string',
   addressCountry: 'string',
   phone: 'string',

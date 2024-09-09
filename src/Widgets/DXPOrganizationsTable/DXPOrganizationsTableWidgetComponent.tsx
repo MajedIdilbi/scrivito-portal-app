@@ -52,8 +52,8 @@ provideComponent(DXPOrganizationsWidget, ({ widget }) => {
               <tr
                 key={dataItem.id()}
                 className="cursor-pointer"
-                onClick={() => navigateTo(dataItem)
-              }>
+                onClick={() => navigateTo(dataItem)}
+              >
                 {tableCols.map((e) => (
                   <td key={e.accessor}>
                     {ensureString(dataItem.get(e.accessor))}
@@ -61,7 +61,7 @@ provideComponent(DXPOrganizationsWidget, ({ widget }) => {
                 ))}
                 <td className="visually-hidden visually-hidden-focusable">
                   {/* <LinkTag to={dataItem} /> */}
-                  <a href={urlForDataItem(dataItem) as any} />
+                  <a href={ensureString(urlForDataItem(dataItem))} />
                 </td>
               </tr>
             ))}
@@ -72,9 +72,7 @@ provideComponent(DXPOrganizationsWidget, ({ widget }) => {
       <BottomBar>
         <Button
           variant="primary"
-          onClick={() =>
-            navigateTo(() => organizationAddPage)
-          }
+          onClick={() => navigateTo(() => organizationAddPage)}
         >
           Add
         </Button>
