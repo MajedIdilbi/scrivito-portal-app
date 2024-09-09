@@ -17,7 +17,7 @@ import { EditorNote } from '@/Components/EditorNote'
 
 import { DXPOrganizationsWidget } from './DXPOrganizationsTableWidgetClass'
 import { ensureString } from '@/utils/ensureString'
-import { Nav } from 'react-bootstrap'
+import { Loading } from '../../Components/Loading'
 
 provideComponent(DXPOrganizationsWidget, ({ widget }) => {
   const dataScope = useData()
@@ -79,7 +79,9 @@ provideComponent(DXPOrganizationsWidget, ({ widget }) => {
       </BottomBar>
     </div>
   )
-})
+},
+{ loading: Loading },
+)
 
 const tableCols = [
   {
