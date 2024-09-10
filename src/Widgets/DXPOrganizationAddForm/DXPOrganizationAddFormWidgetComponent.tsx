@@ -1,4 +1,4 @@
-import { Obj, LinkTag, provideComponent, navigateTo } from 'scrivito'
+import { Obj, LinkTag, provideComponent, navigateTo, ClientError} from 'scrivito'
 import { useForm } from 'react-hook-form'
 import { pickBy } from 'lodash-es'
 
@@ -17,7 +17,20 @@ provideComponent(DXPOrganizationAddFormWidget, () => {
 
   const onSubmit = (data: typeof schema) => {
     console.log(data)
-    Company.create(pickBy(data, (att) => att.length > 0))
+    return Company.create(pickBy(data, (att) => att.length > 0)).catch((error: ClientError) => {
+      onError(error)
+    })
+  }
+
+  const onError = (error: ClientError) => {
+    switch(error.httpStatus) {
+      case 400:
+        window.alert("Bad Request");
+        break
+      default:
+        window.alert("Unexpected Error");
+        break
+    }
   }
 
   const organizationsPage = Obj.getByPermalink('organizations-page')
@@ -107,7 +120,7 @@ provideComponent(DXPOrganizationAddFormWidget, () => {
           Save
         </Button>
         <Button
-          onClick={() => navigateTo(Obj.getByPermalink('organizations-page'))}
+          onClick={() => navigateTo(organizationsPage)}
         >
           Cancel
         </Button>

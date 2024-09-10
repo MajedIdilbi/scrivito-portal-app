@@ -1,4 +1,4 @@
-import { navigateTo, Obj, provideComponent, useDataItem } from 'scrivito'
+import { navigateTo, Obj, provideComponent, useDataItem, ClientError } from 'scrivito'
 import { DXPCompanyWidget } from './DXPCompanyDetailsWidgetClass'
 import { ensureString } from '@/utils/ensureString'
 import { BottomBar, Button, Field } from '@justrelate/jr-ui-components'
@@ -14,14 +14,31 @@ provideComponent(DXPCompanyWidget, () => {
   const { register, handleSubmit } = useForm()
 
   const onDeleteClick = () => {
-    company?.delete()
-    navigateTo(Obj.getByPermalink('organizations-page'))
+    return company?.delete().then(() => {
+      navigateTo(Obj.getByPermalink('organizations-page'))
+    }).catch((error: ClientError) => {
+      onError(error)
+    })
   }
 
   const onSubmit = (data: any) => {
     console.log(data)
-    company?.update(data)
-    setEditing(false)
+    return company?.update(data).then(() => {
+      setEditing(false)
+    }).catch((error: ClientError) => {
+      onError(error)
+    })
+  }
+
+  const onError = (error: ClientError) => {
+    switch(error.httpStatus) {
+      case 400:
+        window.alert("Bad Request");
+        break
+      default:
+        window.alert("Unexpected Error");
+        break
+    }
   }
 
   return (
