@@ -14,19 +14,19 @@ provideComponent(DXPCompanyWidget, () => {
   const { register, handleSubmit } = useForm()
 
   const onDeleteClick = () => {
-    return company?.delete().catch((error: ClientError) => {
-      onError(error)
-    }).finally(() => {
+    return company?.delete().then(() => {
       navigateTo(Obj.getByPermalink('organizations-page'))
+    }).catch((error: ClientError) => {
+      onError(error)
     })
   }
 
   const onSubmit = (data: any) => {
     console.log(data)
-    return company?.update(data).catch((error: ClientError) => {
-      onError(error)
-    }).finally(() => {
+    return company?.update(data).then(() => {
       setEditing(false)
+    }).catch((error: ClientError) => {
+      onError(error)
     })
   }
 
