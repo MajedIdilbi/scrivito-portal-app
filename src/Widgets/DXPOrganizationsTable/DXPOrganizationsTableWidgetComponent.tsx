@@ -5,7 +5,6 @@ import {
   Obj,
   provideComponent,
   useData,
-  urlForDataItem,
 } from 'scrivito'
 
 import { Table } from '@justrelate/jr-ui-components/Table'
@@ -60,8 +59,7 @@ provideComponent(DXPOrganizationsWidget, ({ widget }) => {
                   </td>
                 ))}
                 <td className="visually-hidden visually-hidden-focusable">
-                  {/* <LinkTag to={dataItem} /> */}
-                  <a href={ensureString(urlForDataItem(dataItem))} />
+                  <LinkTag to={dataItem} />
                 </td>
               </tr>
             ))}
