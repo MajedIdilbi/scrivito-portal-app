@@ -1,3 +1,4 @@
+import React, { useRef, useState } from 'react'
 import {
   DataItem,
   LinkTag,
@@ -18,67 +19,97 @@ import { DXPOrganizationsWidget } from './DXPOrganizationsTableWidgetClass'
 import { ensureString } from '@/utils/ensureString'
 import { Loading } from '../../Components/Loading'
 
-provideComponent(DXPOrganizationsWidget, ({ widget }) => {
-  const dataScope = useData()
-  let dataError: unknown
+provideComponent(
+  DXPOrganizationsWidget,
+  () => {
+    const dataScope = useData()
+    const searchRef = useRef<HTMLInputElement>(null)
+    const [search, setSearch] = useState('')
+    let dataError: unknown
 
-  try {
-    if (dataScope.isEmpty()) {
-      return <EditorNote>The data column list is empty.</EditorNote>
+    try {
+      if (dataScope.isEmpty()) {
+        return <EditorNote>The data column list is empty.</EditorNote>
+      }
+    } catch (error) {
+      dataError = error
     }
-  } catch (error) {
-    dataError = error
-  }
 
-  let dataItems: DataItem[]
-  try {
-    dataItems = dataScope.take()
-  } catch (error) {
-    dataItems = []
-    dataError = error
-  }
+    let dataItems: DataItem[]
+    try {
+      dataItems = dataScope.take()
+    } catch (error) {
+      dataItems = []
+      dataError = error
+    }
 
-  if (dataError) return <DataErrorEditorNote error={dataError} />
+    const onSearchClick = () => {
+      setSearch(searchRef.current?.value ?? '')
+    }
 
-  const organizationAddPage = Obj.getByPermalink('organization-add-page')
+    const onKeyDown = (e: React.KeyboardEvent) => {
+      if (e.key === 'Enter') onSearchClick()
+    }
 
-  return (
-    <div className="row">
-      <div className="col-sm-12">
-        <div className="card">
-          <Table columns={tableCols} className="mb-0">
-            {dataItems.map((dataItem) => (
-              <tr
-                key={dataItem.id()}
-                className="cursor-pointer"
-                onClick={() => navigateTo(dataItem)}
-              >
-                {tableCols.map((e) => (
-                  <td key={e.accessor}>
-                    {ensureString(dataItem.get(e.accessor))}
-                  </td>
-                ))}
-                <td className="visually-hidden visually-hidden-focusable">
-                  <LinkTag to={dataItem} />
-                </td>
-              </tr>
-            ))}
-          </Table>
+    dataItems = dataScope.transform({ search }).take()
+
+    if (dataError) return <DataErrorEditorNote error={dataError} />
+
+    const organizationAddPage = Obj.getByPermalink('organization-add-page')
+
+    return (
+      <>
+        <div className="row">
+          <div className="col-sm-7">
+            <div className="d-flex mb-2">
+              <input
+                type="search"
+                className="form-control"
+                ref={searchRef}
+                onKeyDown={onKeyDown}
+              />
+              <Button onClick={onSearchClick}>Search</Button>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <BottomBar>
-        <Button
-          variant="primary"
-          onClick={() => navigateTo(() => organizationAddPage)}
-        >
-          Add
-        </Button>
-      </BottomBar>
-    </div>
-  )
-},
-{ loading: Loading },
+        <div className="row">
+          <div className="col-sm-12">
+            <div className="card">
+              <Table columns={tableCols} className="mb-0">
+                {dataItems.map((dataItem) => (
+                  <tr
+                    key={dataItem.id()}
+                    className="cursor-pointer"
+                    onClick={() => navigateTo(dataItem)}
+                  >
+                    {tableCols.map((e) => (
+                      <td key={e.accessor}>
+                        {ensureString(dataItem.get(e.accessor))}
+                      </td>
+                    ))}
+                    <td className="visually-hidden visually-hidden-focusable">
+                      <LinkTag to={dataItem} />
+                    </td>
+                  </tr>
+                ))}
+              </Table>
+            </div>
+          </div>
+
+          <BottomBar>
+            <Button
+              variant="primary"
+              onClick={() => navigateTo(() => organizationAddPage)}
+            >
+              Add
+            </Button>
+          </BottomBar>
+        </div>
+      </>
+    )
+  },
+  { loading: Loading },
 )
 
 const tableCols = [
