@@ -25,8 +25,8 @@ provideComponent(
   () => {
     const dataScope = useData()
     const searchRef = useRef<HTMLInputElement>(null)
-    const [search, setSearch] = useState('')
-    const { setSearch: setSearchContext } = useContext(DataBatchContext)
+    const [searchValue, setSearchValue] = useState('')
+    const { setSearch } = useContext(DataBatchContext)
     let dataError: unknown
 
     try {
@@ -46,11 +46,11 @@ provideComponent(
     }
 
     const onChange = () => {
-      setSearch(searchRef.current?.value ?? '')
+      setSearchValue(searchRef.current?.value ?? '')
     }
 
     const onSearchClick = () => {
-      setSearchContext!(search)
+      setSearch!(searchValue)
     }
 
     const onKeyDown = (e: React.KeyboardEvent) => {
@@ -72,7 +72,7 @@ provideComponent(
                 ref={searchRef}
                 onKeyDown={onKeyDown}
                 onChange={onChange}
-                value={search}
+                value={searchValue}
               />
               <Button onClick={onSearchClick}>Search</Button>
             </div>
