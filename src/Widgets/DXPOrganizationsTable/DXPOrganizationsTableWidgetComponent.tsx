@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useContext } from 'react'
 import {
   DataItem,
   LinkTag,
@@ -18,13 +18,15 @@ import { EditorNote } from '@/Components/EditorNote'
 import { DXPOrganizationsWidget } from './DXPOrganizationsTableWidgetClass'
 import { ensureString } from '@/utils/ensureString'
 import { Loading } from '../../Components/Loading'
+import { DataBatchContext } from '../../Components/DataBatchContext'
 
 provideComponent(
   DXPOrganizationsWidget,
   () => {
     const dataScope = useData()
     const searchRef = useRef<HTMLInputElement>(null)
-    const [search, setSearch] = useState('')
+    const [searchValue, setSearchValue] = useState('')
+    const { setSearch } = useContext(DataBatchContext)
     let dataError: unknown
 
     try {
@@ -43,15 +45,17 @@ provideComponent(
       dataError = error
     }
 
+    const onChange = () => {
+      setSearchValue(searchRef.current?.value ?? '')
+    }
+
     const onSearchClick = () => {
-      setSearch(searchRef.current?.value ?? '')
+      setSearch!(searchValue)
     }
 
     const onKeyDown = (e: React.KeyboardEvent) => {
       if (e.key === 'Enter') onSearchClick()
     }
-
-    dataItems = dataScope.transform({ search }).take()
 
     if (dataError) return <DataErrorEditorNote error={dataError} />
 
@@ -67,6 +71,8 @@ provideComponent(
                 className="form-control"
                 ref={searchRef}
                 onKeyDown={onKeyDown}
+                onChange={onChange}
+                value={searchValue}
               />
               <Button onClick={onSearchClick}>Search</Button>
             </div>
