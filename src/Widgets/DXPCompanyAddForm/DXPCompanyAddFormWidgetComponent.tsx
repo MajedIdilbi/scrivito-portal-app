@@ -1,4 +1,4 @@
-import { Obj, LinkTag, provideComponent, navigateTo, ClientError} from 'scrivito'
+import { Obj, provideComponent, navigateTo, ClientError } from 'scrivito'
 import { useForm } from 'react-hook-form'
 import { pickBy } from 'lodash-es'
 
@@ -6,10 +6,10 @@ import { Button } from '@justrelate/jr-ui-components/Button'
 
 import { Company } from '@/Data/Compnay/CompanyDataClass'
 
-import { DXPOrganizationAddFormWidget } from './DXPOrganizationAddFormWidgetClass'
+import { DXPCompanyAddFormWidget } from './DXPCompanyAddFormWidgetClass'
 import { BottomBar } from '@justrelate/jr-ui-components'
 
-provideComponent(DXPOrganizationAddFormWidget, () => {
+provideComponent(DXPCompanyAddFormWidget, () => {
   const schema = Company.attributeDefinitions()
   const schemaKeys = Object.keys(schema)
 
@@ -17,18 +17,20 @@ provideComponent(DXPOrganizationAddFormWidget, () => {
 
   const onSubmit = (data: typeof schema) => {
     console.log(data)
-    return Company.create(pickBy(data, (att) => att.length > 0)).catch((error: ClientError) => {
-      onError(error)
-    })
+    return Company.create(pickBy(data, (att) => att.length > 0)).catch(
+      (error: ClientError) => {
+        onError(error)
+      },
+    )
   }
 
   const onError = (error: ClientError) => {
-    switch(error.httpStatus) {
+    switch (error.httpStatus) {
       case 400:
-        window.alert("Bad Request");
+        window.alert('Bad Request')
         break
       default:
-        window.alert("Unexpected Error");
+        window.alert('Unexpected Error')
         break
     }
   }
@@ -119,11 +121,7 @@ provideComponent(DXPOrganizationAddFormWidget, () => {
         <Button variant="primary" onClick={() => handleSubmit(onSubmit)()}>
           Save
         </Button>
-        <Button
-          onClick={() => navigateTo(organizationsPage)}
-        >
-          Cancel
-        </Button>
+        <Button onClick={() => navigateTo(organizationsPage)}>Cancel</Button>
       </BottomBar>
     </>
   )

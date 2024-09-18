@@ -15,13 +15,13 @@ import { BottomBar } from '@justrelate/jr-ui-components'
 import { DataErrorEditorNote } from '@/Components/DataErrorEditorNote'
 import { EditorNote } from '@/Components/EditorNote'
 
-import { DXPOrganizationsWidget } from './DXPOrganizationsTableWidgetClass'
+import { DXPCompaniesWidget } from './DXPCompaniesTableWidgetClass'
 import { ensureString } from '@/utils/ensureString'
 import { Loading } from '../../Components/Loading'
 import { DataBatchContext } from '../../Components/DataBatchContext'
 
 provideComponent(
-  DXPOrganizationsWidget,
+  DXPCompaniesWidget,
   () => {
     const dataScope = useData()
     const searchRef = useRef<HTMLInputElement>(null)
