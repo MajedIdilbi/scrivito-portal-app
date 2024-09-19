@@ -76,7 +76,7 @@ provideComponent(
         })
     }
 
-    const onSubmit = (data: any) => {
+    const onSubmit = (data: { [x: string]: unknown }) => {
       console.log(data)
       return company
         ?.update(data)
@@ -99,7 +99,7 @@ provideComponent(
       }
     }
 
-    if (error) return <div>Error has occured</div>
+    if (error) return <div>Error has occurred</div>
 
     return (
       <>

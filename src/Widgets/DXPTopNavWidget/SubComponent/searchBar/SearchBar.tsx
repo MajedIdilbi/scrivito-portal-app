@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+// TODO: remove eslint-disable after the code clean up
 import React from 'react'
 
 import { debounce } from 'lodash'
@@ -9,10 +11,11 @@ export const SearchBar: React.FC = () => {
   const [showResult, setShowResult] = React.useState(false)
   const [searchKey, setSearchKey] = React.useState('')
 
-  const search = (input: string) => {
+  const search = React.useCallback((input: string) => {
     console.log(`Searching for: ${input}`)
-  }
+  }, [])
 
+  // TODO: fix the debouncer
   const debouncer = React.useMemo(
     () => debounce((value) => search(value), 1000),
     [search],
@@ -25,10 +28,10 @@ export const SearchBar: React.FC = () => {
       <div ref={ref} className="jr-searchbar mx-auto">
         <div className="input-group input-group-search">
           <input
-            aria-label={'Search bar'}
+            aria-label="Search bar"
             name="search-bar"
             type="text"
-            placeholder={'Search ...'}
+            placeholder="Search ..."
             className="form-control"
             onChange={({ target: { value } }) => {
               debouncer(value)
