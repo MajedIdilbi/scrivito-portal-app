@@ -1,10 +1,10 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <title>Neoletter - Error</title>
+    <title>Neoletter - Forms Overview</title>
     <!-- CSS -->
     <link href="http://localhost:8080/assets/index.css" rel="stylesheet">
     <!-- Favicons -->
@@ -22,8 +22,7 @@
 
   </head>
   <body>
-
-
+    
     <div class="jr-wrapper">
 
 
@@ -77,9 +76,13 @@
           <span class="label">Dashboard</span>
         </a>
 
-        <a href="forms-overview.html" class="jr-buttonbar active" data-tooltip="Forms" data-flow="right">
+        <a href="forms-overview.html" class="jr-buttonbar" data-tooltip="Forms" data-flow="right">
           <i class="jr-icon jr-icon-table"></i>
           <span class="label">Forms</span>
+        </a>
+        <a href="mailings-overview.html" class="jr-buttonbar active" data-tooltip="Mailings" data-flow="right">
+          <i class="jr-icon jr-icon-letter-open"></i>
+          <span class="label">Mailings</span>
         </a>
         
 
@@ -94,35 +97,151 @@
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-              <li class="breadcrumb-item"><a href="forms-overview.html">Forms Overview</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Forms Detail</li>
+              <li class="breadcrumb-item"><a href="mailings-overview.html">Mailings Overview</a></li>
+              <li class="breadcrumb-item active" aria-current="page">New Mailing from CSV</li>
             </ol>
           </nav>
 
 
- 
+          <div class="row">
+            <div class="col-sm-12 col-md-8">
+              <p>Start with a new Mailing within Neoletter by upload a CSV file with recipients.
+              </p>
+            </div>
+          </div>
 
 
+          <h4>Progress state</h4>
           
 
-          <div class="box-error">
-            <div class="spaceman"></div>
-            <h3>Something went wrong</h3>
-            <p class="text-muted">Everything is fine - nobody cares about your issues.</p>
-          </div>
 
-          <div class="box-error">
-            <div class="spaceman-lock"></div>
-            <h3>Permissions denied</h3>
-            <p class="text-muted">Please contact your admin.</p>
+          <!-- steps:start -->
+          <div class="jr-steps">
+            <div class="jr-steps-item active">
+              <span class="counter"><span>1</span></span>
+              <div class="jr-list-item">
+                <a class="d-flex" href="mailing-new-csv.html">
+                  <div class="jr-list-group">
+                    <i class="jr-icon jr-icon-contacts-big my-auto me-1"></i>
+                  </div>
+                  <div class="jr-list-group grow">
+                    <p class="h5 mb-0">Recipients</p>
+                    <p class="text-meta text-small mb-0">List imported by CSV upload</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="jr-steps-item">
+              <span class="counter"><span>2</span></span>
+              <div class="jr-list-item">
+                <a class="d-flex" href="mailing-new-setup.html">
+                  <div class="jr-list-group">
+                    <i class="jr-icon jr-icon-gear-big my-auto me-1"></i>
+                  </div>
+                  <div class="jr-list-group grow">
+                    <p class="h5 mb-0">Setup</p>
+                    <p class="text-meta text-small mb-0">Set all metadata</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="jr-steps-item">
+              <span class="counter"><span>3</span></span>
+              <div class="jr-list-item">
+                <div class="jr-list-group">
+                  <i class="jr-icon jr-icon-mailing-template-big my-auto me-1"></i>
+                </div>
+                <div class="jr-list-group grow">
+                  <p class="h5 mb-0">Template & Content</p>
+                  <p class="text-meta text-small mb-0">Compose content in Scrivito</p>
+                </div>
+              </div>
+            </div>
+            <div class="jr-steps-item">
+              <span class="counter"><span>4</span></span>
+              <div class="jr-list-item">
+                <a class="d-flex" href="mailing-new-confirm.html">
+                  <div class="jr-list-group">
+                    <i class="jr-icon jr-icon-paperplane-big my-auto me-1"></i>
+                  </div>
+                  <div class="jr-list-group grow">
+                    <p class="h5 mb-0">Confirm & Send</p>
+                    <p class="text-meta text-small mb-0">Check all data and send mailing</p>
+                  </div>
+                </a>
+              </div>
+            </div>
           </div>
+          <!-- steps:end -->
 
+
+
+
+
+
+          <br>
+
+
+
+          <h4>Recipients</h4>
           
-          <div class="box-error">
-            <div class="success-plane"></div>
-            <h3>Thank you for your form submission!</h3>
-            <p class="text-muted"> We will process your form submission and get back to you within a couple of hours.</p>
-          </div>
+          <!-- card:start -->
+          <div class="card">
+            <div class="card-body">
+
+            <form class="">
+
+              <div class="row g-3 ">
+                <div class="col-lg-3">
+                  <div class="mb-2">
+                    <h4 class="mb-0">List Details</h4>
+                    <div class="form-text">List imported by file upload.</div>
+                  </div>
+
+                </div>
+                <div class="col-lg">
+                  <div class="mb-2">
+                    <label for="filename" class="form-label">Title of List</label>
+                    <input type="text" class="form-control" id="filename" value="Segment 55">
+                  </div>
+                  <div class="mb-2">
+                    <label for="formFile" class="form-label">File Upload</label>
+                    <input class="form-control" type="file" id="formFile">
+                  </div>
+                  <div class="mb-2">
+                    <label for="amount" class="form-label">Recipient amount</label>
+                    <input type="text" class="form-control" id="amount" value="33.781" disabled>
+                  </div>
+                  
+
+                </div>
+              
+
+                 
+              </div>
+
+              <div class="box-error">
+                <div class="file-question"></div>
+                <h3>Waiting for upload </h3>
+              </div>
+
+              <div class="box-error">
+                <div class="file-ok"></div>
+                <h3>Upload ok</h3>
+              </div>
+
+              <div class="box-error">
+                <div class="file-error"></div>
+                <h3>Something went wrong</h3>
+              </div>
+
+            </form>
+
+            </div>
+            </div>
+          <!-- card:end -->
+
+        
 
 
           
@@ -143,10 +262,9 @@
 
     <!-- JR BOTTOMBAR START -->
     <div class="jr-bottombar justify-content-end">
-      <a href="forms-overview.html" class="btn me-auto">Back to overview</a>
-      <div class="btn disabled">Delete Form</div>
-      <div class="btn">Export collected Data</div>
-      <div class="btn btn-primary">Edit Details</div>
+      <a href="mailings-overview.html" class="btn me-auto">Cancel</a>
+      <div class="btn">Save Draft</div>
+      <a href="mailing-new-setup.html" class="btn btn-primary">Setup</a>
     </div>
     <!-- JR BOTTOMBAR END -->
 
@@ -172,10 +290,7 @@
     </ul>
 
 
-
     </div>
-    
-
 
   </body>
 </html>

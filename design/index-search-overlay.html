@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  <title>Neoletter - Dashboard</title>
+  <title>Neoletter - Dashboard - Search Overlay open</title>
   <!-- CSS -->
   <link href="http://localhost:8080/assets/index.css" rel="stylesheet">
   <!-- Favicons -->
@@ -57,6 +57,191 @@
           <input data-testid="search-input" aria-label="search bar" name="search-bar" type="text" placeholder="search . . ." class="form-control">
           <button class="btn" type="submit"><i class="jr-icon jr-icon-lens"></i></button>
         </div>
+
+
+
+        <!-- SEARCH BOX LIST OVERLAY START -->
+
+        <div class=" card card-search-result">
+
+
+          <div class="card-body">
+            <h6 class="m-0">Recent Searches</h6>
+          </div>
+
+          <div class="jr-list-flex obj-list">
+
+
+            <!-- jr-list-item loading:start -->
+            <div class="jr-list-item" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-original-title="" title="">
+              <div class="jr-list-group shrink">
+
+                <div class="img-profile xs cover me-3 skeleton"></div>
+              </div>
+              <div class="jr-list-group grow">
+                <p class="h5 mb-0 skeleton"></p>
+              </div>
+            </div>
+            <!-- jr-list-item loading:end -->
+
+            <!-- jr-list-item loading:start -->
+            <div class="jr-list-item" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-original-title="" title="">
+              <div class="jr-list-group shrink">
+
+                <div class="img-profile sm cover me-3 skeleton"></div>
+              </div>
+              <div class="jr-list-group grow">
+                <p class="h5 mb-0 skeleton"></p>
+                <p class="text-small text-meta mb-0 skeleton"></p>
+              </div>
+            </div>
+            <!-- jr-list-item loading:end -->
+
+            <!-- jr-list-item loading:start -->
+            <div class="jr-list-item" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-original-title="" title="">
+              <div class="jr-list-group shrink">
+
+                <div class="img-profile cover me-3 skeleton"></div>
+              </div>
+              <div class="jr-list-group grow">
+                <p class="h5 mb-0 skeleton"></p>
+                <p class="text-small text-meta mb-0 skeleton"></p>
+              </div>
+            </div>
+            <!-- jr-list-item loading:end -->
+
+
+            <!-- jr-list-item:start -->
+            <div class="jr-list-item" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-original-title="" title="">
+              <div class="jr-list-group shrink">
+                <img class="img-profile sm cover me-3" src="../src/assets/images/profile-organisation.svg" alt="person">
+              </div>
+              <div class="jr-list-group grow">
+                <p class="h5 mb-0">Schlemmer AG</p>
+                <p class="text-small text-meta mb-0">Manufacturing</p>
+              </div>
+            </div>
+            <!-- jr-list-item:end -->
+
+            <!-- jr-list-item:start -->
+            <div class="jr-list-item" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-original-title="" title="">
+              <div class="jr-list-group shrink">
+                <i class="jr-icon jr-icon-note-big me-3"></i>
+              </div>
+
+              <div class="jr-list-group grow">
+                <p class="h5 mb-0">Note in last meeting</p>
+                <p class="text-small text-meta mb-0">Cool stuff comes up</p>
+              </div>
+            </div>
+            <!-- jr-list-item:end -->
+            <!-- jr-list-item:start -->
+            <div class="jr-list-item" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-original-title="" title="">
+              <div class="jr-list-group shrink">
+                <i class="jr-icon jr-icon-phone-in-big me-3"></i>
+              </div>
+
+              <div class="jr-list-group grow">
+                <p class="h5 mb-0">Schlemmer AG</p>
+                <p class="text-small text-meta mb-0">Manufacturing</p>
+              </div>
+            </div>
+            <!-- jr-list-item:end -->
+
+
+            <!-- jr-list-item:start -->
+            <div class="jr-list-item" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-original-title="" title="">
+              <div class="jr-list-group shrink">
+                <img class="img-profile xs cover me-3" src="../src/assets/images/profile-man.svg" alt="person">
+              </div>
+              <div class="jr-list-group grow">
+                <p class="h5 mb-0">Horst Schlemmer - TEST SMALL</p>
+              </div>
+            </div>
+            <!-- jr-list-item:end -->
+            <!-- jr-list-item:start -->
+            <div class="jr-list-item" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-original-title="" title="">
+              <div class="jr-list-group shrink">
+                <i class="jr-icon jr-icon-phone-in me-3"></i>
+              </div>
+
+              <div class="jr-list-group grow">
+                <p class="h5 mb-0">Schlemmer AG - TEST SMALL</p>
+                <p class="text-small text-meta mb-0">Manufacturing</p>
+              </div>
+            </div>
+            <!-- jr-list-item:end -->
+
+          </div>
+
+          <div class="card-footer">
+            <button type=" button" class=" btn btn-sm w-100 m-0">Show all results</button>
+          </div>
+        </div>
+        <!-- SEARCH BOX LIST OVERLAY END -->
+
+
+
+
+
+        <!-- SEARCH BOX LIST OVERLAY START -->
+
+        <div class=" card card-search-result" style="top: 750px;">
+
+          <div class="box-error">
+            <div class="spaceman"></div>
+            <h3>Something went wrong</h3>
+            <p class="text-muted">Not sure if we need this line.</p>
+          </div>
+          <div class="card-footer">
+            <button type=" button" class=" btn btn-sm w-100 m-0">Lets try again</button>
+          </div>
+
+
+        </div>
+        <!-- SEARCH BOX LIST OVERLAY END -->
+
+        <!-- SEARCH BOX LIST OVERLAY START -->
+
+        <div class=" card card-search-result" style="top: 1140px;">
+
+          <div class="box-error">
+            <div class="spaceman-sad"></div>
+            <h3>Nothing was found</h3>
+            <p class="text-muted">Maybe try something different.</p>
+          </div>
+          <div class="card-footer">
+            <button type=" button" class=" btn btn-sm w-100 m-0">Lets try again</button>
+          </div>
+
+
+        </div>
+        <!-- SEARCH BOX LIST OVERLAY END -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- SEARCH OVERLAY START -->
+        <div class="search-backdrop fade show"></div>
+        <!-- SEARCH OVERLAY END -->
+
+
+
+
       </div>
 
 
@@ -2083,22 +2268,6 @@
               <i class="jr-icon jr-icon-sidebar-open"></i>
               <i class="jr-icon jr-icon-sidebar-open-big"></i>
 
-              <br>
-              <i class="jr-icon jr-icon-link-away"></i>
-              <i class="jr-icon jr-icon-link-away-big"></i>
-
-              <br>
-              <i class="jr-icon jr-icon-minimize"></i>
-              <i class="jr-icon jr-icon-minimize-big"></i>
-              <br>
-              <i class="jr-icon jr-icon-maximize"></i>
-              <i class="jr-icon jr-icon-maximize-big"></i>
-              <br>
-              <i class="jr-icon jr-icon-split-h"></i>
-              <i class="jr-icon jr-icon-split-h-big"></i>
-
-
-
 
 
             </div>
@@ -2296,21 +2465,6 @@ code content goes here
   </div>
 
 
-  <div class="fade toast show border-top-red" role="alert" aria-live="assertive" aria-atomic="true" style="position: fixed; top:
-        50px; right: 30px; z-index: 11;">
-    <div class="toast-body">
-      <button type="button" class="btn-close" aria-label="Close" data-dismiss="toast" onClick="$('.toast').hide();"></button>
-      <div class="toast-message">
-        <div class="toast-group"><i class="jr-icon jr-icon-alert me-2
-                text-red"></i></div>
-        <div class="toast-group">
-          <h5>Something went wrong</h5>
-          <p class="mb-0">Everybody cares about your issues please stay
-            calm.</p>
-        </div>
-      </div>
-    </div>
-  </div>
 
 
   <!-- JR MODAL SMALL START -->
@@ -2385,432 +2539,6 @@ code content goes here
   <!-- JR MODAL BIG END -->
 
 
-  <!-- JR RANGE PICKER START -->
-  <div style="max-width: 100%; position: absolute; bottom: 20px; right:
-        20px;" class="dropdown-menu jr-range-picker show" id="datepicker-test">
-    <div class="d-flex">
-      <div class="jr-range-picker-aside">
-        <button class="dropdown-item">This week</button>
-        <button class="dropdown-item">Last month</button>
-        <button class="dropdown-item">Last 6 months</button>
-        <button class="dropdown-item">Last year</button>
-      </div>
-      <div class="rdp">
-        <div class="rdp-months">
-          <div class="rdp-month
-                rdp-caption_start rdp-caption_end">
-            <div class="rdp-caption">
-              <div class="rdp-caption_dropdowns">
-                <div class="rdp-vhidden">
-                  <h2 class="rdp-caption_label" aria-live="polite" aria-atomic="true" id="7">March 2022</h2>
-                </div>
-                <div class="rdp-dropdown_month"><span class="rdp-vhidden">Month:
-                  </span><select aria-label="Month:" class="rdp-dropdown">
-                    <option value="0">January</option>
-                    <option value="1">February</option>
-                    <option value="2">March</option>
-                    <option value="3">April</option>
-                    <option value="4">May</option>
-                    <option value="5">June</option>
-                    <option value="6">July</option>
-                    <option value="7">August</option>
-                    <option value="8">September</option>
-                    <option value="9">October</option>
-                    <option value="10">November</option>
-                    <option value="11">December</option>
-                  </select>
-                  <div class="rdp-caption_label" aria-hidden="true">March<svg width="8px" height="8px" viewBox="0 0 120 120" data-testid="iconDropdown" class="rdp-dropdown_icon">
-                      <path d="M4.22182541,48.2218254 C8.44222828,44.0014225
-                            15.2388494,43.9273804 19.5496459,47.9996989
-                            L19.7781746,48.2218254 L60,88.443
-                            L100.221825,48.2218254 C104.442228,44.0014225
-                            111.238849,43.9273804 115.549646,47.9996989
-                            L115.778175,48.2218254 C119.998577,52.4422283
-                            120.07262,59.2388494 116.000301,63.5496459
-                            L115.778175,63.7781746 L67.7781746,111.778175
-                            C63.5577717,115.998577 56.7611506,116.07262
-                            52.4503541,112.000301 L52.2218254,111.778175
-                            L4.22182541,63.7781746 C-0.0739418023,59.4824074
-                            -0.0739418023,52.5175926 4.22182541,48.2218254 Z" fill="currentColor" fill-rule="nonzero">
-                      </path>
-                    </svg></div>
-                </div>
-                <div class="rdp-dropdown_month"><span class="rdp-vhidden">Year:
-                  </span><select aria-label="Year:" class="rdp-dropdown">
-                    <option value="2019">2019</option>
-                    <option value="2020">2020</option>
-                    <option value="2021">2021</option>
-                    <option value="2022">2022</option>
-                    <option value="2023">2023</option>
-                    <option value="2024">2024</option>
-                    <option value="2025">2025</option>
-                    <option value="2026">2026</option>
-                    <option value="2027">2027</option>
-                    <option value="2028">2028</option>
-                    <option value="2029">2029</option>
-                    <option value="2030">2030</option>
-                    <option value="2031">2031</option>
-                    <option value="2032">2032</option>
-                  </select>
-                  <div class="rdp-caption_label" aria-hidden="true">2022<svg width="8px" height="8px" viewBox="0 0 120 120" data-testid="iconDropdown" class="rdp-dropdown_icon">
-                      <path d="M4.22182541,48.2218254 C8.44222828,44.0014225
-                            15.2388494,43.9273804 19.5496459,47.9996989
-                            L19.7781746,48.2218254 L60,88.443
-                            L100.221825,48.2218254 C104.442228,44.0014225
-                            111.238849,43.9273804 115.549646,47.9996989
-                            L115.778175,48.2218254 C119.998577,52.4422283
-                            120.07262,59.2388494 116.000301,63.5496459
-                            L115.778175,63.7781746 L67.7781746,111.778175
-                            C63.5577717,115.998577 56.7611506,116.07262
-                            52.4503541,112.000301 L52.2218254,111.778175
-                            L4.22182541,63.7781746 C-0.0739418023,59.4824074
-                            -0.0739418023,52.5175926 4.22182541,48.2218254 Z" fill="currentColor" fill-rule="nonzero">
-                      </path>
-                    </svg></div>
-                </div>
-              </div>
-            </div>
-            <table class="rdp-table" role="grid" aria-labelledby="7">
-              <thead class="rdp-head">
-                <tr class="rdp-head_row">
-                  <th scope="col" class="rdp-head_cell"><span aria-hidden="true">Su</span><span class="rdp-vhidden">Sunday</span></th>
-                  <th scope="col" class="rdp-head_cell"><span aria-hidden="true">Mo</span><span class="rdp-vhidden">Monday</span></th>
-                  <th scope="col" class="rdp-head_cell"><span aria-hidden="true">Tu</span><span class="rdp-vhidden">Tuesday</span></th>
-                  <th scope="col" class="rdp-head_cell"><span aria-hidden="true">We</span><span class="rdp-vhidden">Wednesday</span></th>
-                  <th scope="col" class="rdp-head_cell"><span aria-hidden="true">Th</span><span class="rdp-vhidden">Thursday</span></th>
-                  <th scope="col" class="rdp-head_cell"><span aria-hidden="true">Fr</span><span class="rdp-vhidden">Friday</span></th>
-                  <th scope="col" class="rdp-head_cell"><span aria-hidden="true">Sa</span><span class="rdp-vhidden">Saturday</span></th>
-                </tr>
-              </thead>
-              <tbody class="rdp-tbody">
-                <tr class="rdp-row">
-                  <td class="rdp-cell"><button class="rdp-button_reset rdp-button rdp-day
-                          rdp-day_outside" tabindex="-1" type="button"><span aria-hidden="true">27</span><span class="rdp-vhidden">27th February (Sunday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_selected
-                          rdp-day_range_start rdp-day_outside" tabindex="-1" type="button" aria-pressed="true"><span aria-hidden="true">28</span><span class="rdp-vhidden">28th February (Monday)</span></button>
-                  </td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_selected
-                          rdp-day_range_middle" tabindex="-1" type="button" aria-pressed="true"><span aria-hidden="true">1</span><span class="rdp-vhidden">1st March (Tuesday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_selected
-                          rdp-day_range_middle" tabindex="-1" type="button" aria-pressed="true"><span aria-hidden="true">2</span><span class="rdp-vhidden">2nd March (Wednesday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_selected
-                          rdp-day_range_middle" tabindex="-1" type="button" aria-pressed="true"><span aria-hidden="true">3</span><span class="rdp-vhidden">3rd March (Thursday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_selected
-                          rdp-day_range_middle" tabindex="-1" type="button" aria-pressed="true"><span aria-hidden="true">4</span><span class="rdp-vhidden">4th March (Friday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_selected
-                          rdp-day_range_middle" tabindex="-1" type="button" aria-pressed="true"><span aria-hidden="true">5</span><span class="rdp-vhidden">5th March (Saturday)</span></button></td>
-                </tr>
-                <tr class="rdp-row">
-                  <td class="rdp-cell"><button class="rdp-button_reset rdp-button rdp-day
-                          rdp-day_selected rdp-day_range_middle" tabindex="-1" type="button" aria-pressed="true"><span aria-hidden="true">6</span><span class="rdp-vhidden">6th March (Sunday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_selected
-                          rdp-day_range_middle" tabindex="-1" type="button" aria-pressed="true"><span aria-hidden="true">7</span><span class="rdp-vhidden">7th March (Monday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_selected
-                          rdp-day_range_middle" tabindex="-1" type="button" aria-pressed="true"><span aria-hidden="true">8</span><span class="rdp-vhidden">8th March (Tuesday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_selected
-                          rdp-day_range_middle" tabindex="0" type="button" aria-pressed="true"><span aria-hidden="true">9</span><span class="rdp-vhidden">9th March (Wednesday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_selected
-                          rdp-day_range_middle" tabindex="-1" type="button" aria-pressed="true"><span aria-hidden="true">10</span><span class="rdp-vhidden">10th March (Thursday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_selected
-                          rdp-day_range_middle" tabindex="-1" type="button" aria-pressed="true"><span aria-hidden="true">11</span><span class="rdp-vhidden">11th March (Friday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_selected
-                          rdp-day_range_middle" tabindex="-1" type="button" aria-pressed="true"><span aria-hidden="true">12</span><span class="rdp-vhidden">12th March (Saturday)</span></button></td>
-                </tr>
-                <tr class="rdp-row">
-                  <td class="rdp-cell"><button class="rdp-button_reset rdp-button rdp-day
-                          rdp-day_selected rdp-day_range_middle" tabindex="-1" type="button" aria-pressed="true"><span aria-hidden="true">13</span><span class="rdp-vhidden">13th March (Sunday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_selected
-                          rdp-day_range_middle" tabindex="-1" type="button" aria-pressed="true"><span aria-hidden="true">14</span><span class="rdp-vhidden">14th March (Monday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_selected
-                          rdp-day_range_middle" tabindex="-1" type="button" aria-pressed="true"><span aria-hidden="true">15</span><span class="rdp-vhidden">15th March (Tuesday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_selected
-                          rdp-day_range_middle" tabindex="-1" type="button" aria-pressed="true"><span aria-hidden="true">16</span><span class="rdp-vhidden">16th March (Wednesday)</span></button>
-                  </td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_selected
-                          rdp-day_range_middle" tabindex="-1" type="button" aria-pressed="true"><span aria-hidden="true">17</span><span class="rdp-vhidden">17th March (Thursday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_selected
-                          rdp-day_range_middle" tabindex="-1" type="button" aria-pressed="true"><span aria-hidden="true">18</span><span class="rdp-vhidden">18th March (Friday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_selected
-                          rdp-day_range_middle" tabindex="-1" type="button" aria-pressed="true"><span aria-hidden="true">19</span><span class="rdp-vhidden">19th March (Saturday)</span></button></td>
-                </tr>
-                <tr class="rdp-row">
-                  <td class="rdp-cell"><button class="rdp-button_reset rdp-button rdp-day
-                          rdp-day_selected rdp-day_range_middle" tabindex="-1" type="button" aria-pressed="true"><span aria-hidden="true">20</span><span class="rdp-vhidden">20th March (Sunday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_selected
-                          rdp-day_range_middle" tabindex="-1" type="button" aria-pressed="true"><span aria-hidden="true">21</span><span class="rdp-vhidden">21st March (Monday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_selected
-                          rdp-day_range_middle" tabindex="-1" type="button" aria-pressed="true"><span aria-hidden="true">22</span><span class="rdp-vhidden">22nd March (Tuesday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_selected
-                          rdp-day_range_middle" tabindex="-1" type="button" aria-pressed="true"><span aria-hidden="true">23</span><span class="rdp-vhidden">23rd March (Wednesday)</span></button>
-                  </td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_selected
-                          rdp-day_range_middle" tabindex="-1" type="button" aria-pressed="true"><span aria-hidden="true">24</span><span class="rdp-vhidden">24th March (Thursday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_selected
-                          rdp-day_range_middle" tabindex="-1" type="button" aria-pressed="true"><span aria-hidden="true">25</span><span class="rdp-vhidden">25th March (Friday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_selected
-                          rdp-day_range_middle" tabindex="-1" type="button" aria-pressed="true"><span aria-hidden="true">26</span><span class="rdp-vhidden">26th March (Saturday)</span></button></td>
-                </tr>
-                <tr class="rdp-row">
-                  <td class="rdp-cell"><button class="rdp-button_reset rdp-button rdp-day
-                          rdp-day_selected rdp-day_range_middle" tabindex="-1" type="button" aria-pressed="true"><span aria-hidden="true">27</span><span class="rdp-vhidden">27th March (Sunday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_selected
-                          rdp-day_range_middle" tabindex="-1" type="button" aria-pressed="true"><span aria-hidden="true">28</span><span class="rdp-vhidden">28th March (Monday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_selected
-                          rdp-day_range_middle" tabindex="-1" type="button" aria-pressed="true"><span aria-hidden="true">29</span><span class="rdp-vhidden">29th March (Tuesday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_selected rdp-day_range_end" tabindex="-1" type="button" aria-pressed="true"><span aria-hidden="true">30</span><span class="rdp-vhidden">30th March
-                        (Wednesday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_today" tabindex="-1" type="button"><span aria-hidden="true">31</span><span class="rdp-vhidden">31st March (Thursday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_outside" tabindex="-1" type="button"><span aria-hidden="true">1</span><span class="rdp-vhidden">1st April (Friday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_outside" tabindex="-1" type="button"><span aria-hidden="true">2</span><span class="rdp-vhidden">2nd April (Saturday)</span></button></td>
-                </tr>
-                <tr class="rdp-row">
-                  <td class="rdp-cell"><button class="rdp-button_reset rdp-button rdp-day
-                          rdp-day_outside" tabindex="-1" type="button"><span aria-hidden="true">3</span><span class="rdp-vhidden">3rd April (Sunday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_outside" tabindex="-1" type="button"><span aria-hidden="true">4</span><span class="rdp-vhidden">4th April (Monday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_outside" tabindex="-1" type="button"><span aria-hidden="true">5</span><span class="rdp-vhidden">5th April (Tuesday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_outside" tabindex="-1" type="button"><span aria-hidden="true">6</span><span class="rdp-vhidden">6th April (Wednesday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_outside" tabindex="-1" type="button"><span aria-hidden="true">7</span><span class="rdp-vhidden">7th April (Thursday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_outside" tabindex="-1" type="button"><span aria-hidden="true">8</span><span class="rdp-vhidden">8th April (Friday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_outside" tabindex="-1" type="button"><span aria-hidden="true">9</span><span class="rdp-vhidden">9th April (Saturday)</span></button></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-      <div class="rdp">
-        <div class="rdp-months">
-          <div class="rdp-month
-                rdp-caption_start rdp-caption_end">
-            <div class="rdp-caption">
-              <div class="rdp-caption_dropdowns">
-                <div class="rdp-vhidden">
-                  <h2 class="rdp-caption_label" aria-live="polite" aria-atomic="true" id="8">May 2022</h2>
-                </div>
-                <div class="rdp-dropdown_month"><span class="rdp-vhidden">Month:
-                  </span><select aria-label="Month:" class="rdp-dropdown">
-                    <option value="0">January</option>
-                    <option value="1">February</option>
-                    <option value="2">March</option>
-                    <option value="3">April</option>
-                    <option value="4">May</option>
-                    <option value="5">June</option>
-                    <option value="6">July</option>
-                    <option value="7">August</option>
-                    <option value="8">September</option>
-                    <option value="9">October</option>
-                    <option value="10">November</option>
-                    <option value="11">December</option>
-                  </select>
-                  <div class="rdp-caption_label" aria-hidden="true">May<svg width="8px" height="8px" viewBox="0 0 120 120" data-testid="iconDropdown" class="rdp-dropdown_icon">
-                      <path d="M4.22182541,48.2218254 C8.44222828,44.0014225
-                            15.2388494,43.9273804 19.5496459,47.9996989
-                            L19.7781746,48.2218254 L60,88.443
-                            L100.221825,48.2218254 C104.442228,44.0014225
-                            111.238849,43.9273804 115.549646,47.9996989
-                            L115.778175,48.2218254 C119.998577,52.4422283
-                            120.07262,59.2388494 116.000301,63.5496459
-                            L115.778175,63.7781746 L67.7781746,111.778175
-                            C63.5577717,115.998577 56.7611506,116.07262
-                            52.4503541,112.000301 L52.2218254,111.778175
-                            L4.22182541,63.7781746 C-0.0739418023,59.4824074
-                            -0.0739418023,52.5175926 4.22182541,48.2218254 Z" fill="currentColor" fill-rule="nonzero">
-                      </path>
-                    </svg></div>
-                </div>
-                <div class="rdp-dropdown_month"><span class="rdp-vhidden">Year:
-                  </span><select aria-label="Year:" class="rdp-dropdown">
-                    <option value="2019">2019</option>
-                    <option value="2020">2020</option>
-                    <option value="2021">2021</option>
-                    <option value="2022">2022</option>
-                    <option value="2023">2023</option>
-                    <option value="2024">2024</option>
-                    <option value="2025">2025</option>
-                    <option value="2026">2026</option>
-                    <option value="2027">2027</option>
-                    <option value="2028">2028</option>
-                    <option value="2029">2029</option>
-                    <option value="2030">2030</option>
-                    <option value="2031">2031</option>
-                    <option value="2032">2032</option>
-                  </select>
-                  <div class="rdp-caption_label" aria-hidden="true">2022<svg width="8px" height="8px" viewBox="0 0 120 120" data-testid="iconDropdown" class="rdp-dropdown_icon">
-                      <path d="M4.22182541,48.2218254 C8.44222828,44.0014225
-                            15.2388494,43.9273804 19.5496459,47.9996989
-                            L19.7781746,48.2218254 L60,88.443
-                            L100.221825,48.2218254 C104.442228,44.0014225
-                            111.238849,43.9273804 115.549646,47.9996989
-                            L115.778175,48.2218254 C119.998577,52.4422283
-                            120.07262,59.2388494 116.000301,63.5496459
-                            L115.778175,63.7781746 L67.7781746,111.778175
-                            C63.5577717,115.998577 56.7611506,116.07262
-                            52.4503541,112.000301 L52.2218254,111.778175
-                            L4.22182541,63.7781746 C-0.0739418023,59.4824074
-                            -0.0739418023,52.5175926 4.22182541,48.2218254 Z" fill="currentColor" fill-rule="nonzero">
-                      </path>
-                    </svg></div>
-                </div>
-              </div>
-            </div>
-            <table class="rdp-table" role="grid" aria-labelledby="8">
-              <thead class="rdp-head">
-                <tr class="rdp-head_row">
-                  <th scope="col" class="rdp-head_cell"><span aria-hidden="true">Su</span><span class="rdp-vhidden">Sunday</span></th>
-                  <th scope="col" class="rdp-head_cell"><span aria-hidden="true">Mo</span><span class="rdp-vhidden">Monday</span></th>
-                  <th scope="col" class="rdp-head_cell"><span aria-hidden="true">Tu</span><span class="rdp-vhidden">Tuesday</span></th>
-                  <th scope="col" class="rdp-head_cell"><span aria-hidden="true">We</span><span class="rdp-vhidden">Wednesday</span></th>
-                  <th scope="col" class="rdp-head_cell"><span aria-hidden="true">Th</span><span class="rdp-vhidden">Thursday</span></th>
-                  <th scope="col" class="rdp-head_cell"><span aria-hidden="true">Fr</span><span class="rdp-vhidden">Friday</span></th>
-                  <th scope="col" class="rdp-head_cell"><span aria-hidden="true">Sa</span><span class="rdp-vhidden">Saturday</span></th>
-                </tr>
-              </thead>
-              <tbody class="rdp-tbody">
-                <tr class="rdp-row">
-                  <td class="rdp-cell"><button class="rdp-button_reset rdp-button rdp-day" tabindex="-1" type="button"><span aria-hidden="true">1</span><span class="rdp-vhidden">1st May
-                        (Sunday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day" tabindex="-1" type="button"><span aria-hidden="true">2</span><span class="rdp-vhidden">2nd May (Monday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day" tabindex="-1" type="button"><span aria-hidden="true">3</span><span class="rdp-vhidden">3rd May (Tuesday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day" tabindex="-1" type="button"><span aria-hidden="true">4</span><span class="rdp-vhidden">4th May (Wednesday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day" tabindex="-1" type="button"><span aria-hidden="true">5</span><span class="rdp-vhidden">5th May (Thursday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day" tabindex="-1" type="button"><span aria-hidden="true">6</span><span class="rdp-vhidden">6th May (Friday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day" tabindex="-1" type="button"><span aria-hidden="true">7</span><span class="rdp-vhidden">7th May (Saturday)</span></button></td>
-                </tr>
-                <tr class="rdp-row">
-                  <td class="rdp-cell"><button class="rdp-button_reset rdp-button rdp-day" tabindex="-1" type="button"><span aria-hidden="true">8</span><span class="rdp-vhidden">8th May
-                        (Sunday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day" tabindex="0" type="button"><span aria-hidden="true">9</span><span class="rdp-vhidden">9th May (Monday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day" tabindex="-1" type="button"><span aria-hidden="true">10</span><span class="rdp-vhidden">10th May (Tuesday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day" tabindex="-1" type="button"><span aria-hidden="true">11</span><span class="rdp-vhidden">11th May (Wednesday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day" tabindex="-1" type="button"><span aria-hidden="true">12</span><span class="rdp-vhidden">12th May (Thursday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day" tabindex="-1" type="button"><span aria-hidden="true">13</span><span class="rdp-vhidden">13th May (Friday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day" tabindex="-1" type="button"><span aria-hidden="true">14</span><span class="rdp-vhidden">14th May (Saturday)</span></button></td>
-                </tr>
-                <tr class="rdp-row">
-                  <td class="rdp-cell"><button class="rdp-button_reset rdp-button rdp-day" tabindex="-1" type="button"><span aria-hidden="true">15</span><span class="rdp-vhidden">15th May
-                        (Sunday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day" tabindex="-1" type="button"><span aria-hidden="true">16</span><span class="rdp-vhidden">16th May (Monday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day" tabindex="-1" type="button"><span aria-hidden="true">17</span><span class="rdp-vhidden">17th May (Tuesday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day" tabindex="-1" type="button"><span aria-hidden="true">18</span><span class="rdp-vhidden">18th May (Wednesday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day" tabindex="-1" type="button"><span aria-hidden="true">19</span><span class="rdp-vhidden">19th May (Thursday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day" tabindex="-1" type="button"><span aria-hidden="true">20</span><span class="rdp-vhidden">20th May (Friday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day" tabindex="-1" type="button"><span aria-hidden="true">21</span><span class="rdp-vhidden">21st May (Saturday)</span></button></td>
-                </tr>
-                <tr class="rdp-row">
-                  <td class="rdp-cell"><button class="rdp-button_reset rdp-button rdp-day" tabindex="-1" type="button"><span aria-hidden="true">22</span><span class="rdp-vhidden">22nd May
-                        (Sunday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day" tabindex="-1" type="button"><span aria-hidden="true">23</span><span class="rdp-vhidden">23rd May (Monday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day" tabindex="-1" type="button"><span aria-hidden="true">24</span><span class="rdp-vhidden">24th May (Tuesday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day" tabindex="-1" type="button"><span aria-hidden="true">25</span><span class="rdp-vhidden">25th May (Wednesday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day" tabindex="-1" type="button"><span aria-hidden="true">26</span><span class="rdp-vhidden">26th May (Thursday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day" tabindex="-1" type="button"><span aria-hidden="true">27</span><span class="rdp-vhidden">27th May (Friday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day" tabindex="-1" type="button"><span aria-hidden="true">28</span><span class="rdp-vhidden">28th May (Saturday)</span></button></td>
-                </tr>
-                <tr class="rdp-row">
-                  <td class="rdp-cell"><button class="rdp-button_reset rdp-button rdp-day" tabindex="-1" type="button"><span aria-hidden="true">29</span><span class="rdp-vhidden">29th May
-                        (Sunday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day" tabindex="-1" type="button"><span aria-hidden="true">30</span><span class="rdp-vhidden">30th May (Monday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day" tabindex="-1" type="button"><span aria-hidden="true">31</span><span class="rdp-vhidden">31st May (Tuesday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_outside" tabindex="-1" type="button"><span aria-hidden="true">1</span><span class="rdp-vhidden">1st June (Wednesday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_outside" tabindex="-1" type="button"><span aria-hidden="true">2</span><span class="rdp-vhidden">2nd June (Thursday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_outside" tabindex="-1" type="button"><span aria-hidden="true">3</span><span class="rdp-vhidden">3rd June (Friday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_outside" tabindex="-1" type="button"><span aria-hidden="true">4</span><span class="rdp-vhidden">4th June (Saturday)</span></button></td>
-                </tr>
-                <tr class="rdp-row">
-                  <td class="rdp-cell"><button class="rdp-button_reset rdp-button rdp-day
-                          rdp-day_outside" tabindex="-1" type="button"><span aria-hidden="true">5</span><span class="rdp-vhidden">5th June (Sunday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_outside" tabindex="-1" type="button"><span aria-hidden="true">6</span><span class="rdp-vhidden">6th June (Monday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_outside" tabindex="-1" type="button"><span aria-hidden="true">7</span><span class="rdp-vhidden">7th June (Tuesday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_outside" tabindex="-1" type="button"><span aria-hidden="true">8</span><span class="rdp-vhidden">8th June (Wednesday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_outside" tabindex="-1" type="button"><span aria-hidden="true">9</span><span class="rdp-vhidden">9th June (Thursday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_outside" tabindex="-1" type="button"><span aria-hidden="true">10</span><span class="rdp-vhidden">10th June (Friday)</span></button></td>
-                  <td class="rdp-cell"><button class="rdp-button_reset
-                          rdp-button rdp-day rdp-day_outside" tabindex="-1" type="button"><span aria-hidden="true">11</span><span class="rdp-vhidden">11th June (Saturday)</span></button></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="d-flex justify-content-end">
-
-      <button class="btn btn-sm btn-outline-danger">Reset</button>
-      <button class="btn btn-sm" onclick="$('#datepicker-test').hide();">Close</button>
-    </div>
-  </div>
-  <!-- JR RANGE PICKER END -->
 
 </body>
 

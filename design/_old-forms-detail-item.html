@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <title>Neoletter - Error</title>
+    <title>Neoletter - Forms Detail - Item</title>
     <!-- CSS -->
     <link href="http://localhost:8080/assets/index.css" rel="stylesheet">
     <!-- Favicons -->
@@ -95,34 +95,95 @@
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
               <li class="breadcrumb-item"><a href="forms-overview.html">Forms Overview</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Forms Detail</li>
+              <li class="breadcrumb-item"><a href="forms-detail.html">Forms Detail</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Forms Detail Item</li>
             </ol>
           </nav>
 
 
- 
+          <div class="row">
+            <div class="col-sm-12 col-md-8">
+              <p>See single item contents.
+              </p>
+            </div>
+          </div>
 
 
+          <h4>Item Details - Newsletter Subscription</h4>
           
 
-          <div class="box-error">
-            <div class="spaceman"></div>
-            <h3>Something went wrong</h3>
-            <p class="text-muted">Everything is fine - nobody cares about your issues.</p>
+
+
+
+          <div class="card">
+            <div class="card-body">
+              <form class="row g-3">
+
+                <div class="col-md-6">
+
+                  <label for="form-name" class="form-label">Email</label>
+                  <input type="text" class="form-control-readonly" id="form-name" placeholder="" value="horst.seehofer@csu.de" disabled>
+                </div>
+                <div class="col-md-6">
+                  <label for="form-name" class="form-label">Name</label>
+                  <input type="text" class="form-control-readonly" id="form-name" placeholder="" value="Horst" disabled>
+                </div>
+                <div class="col-md-6">
+                  <label for="form-name" class="form-label">Middle Name</label>
+                  <input type="text" class="form-control-readonly" id="form-name" placeholder="not set" value="" disabled>
+                </div>
+                <div class="col-md-6">
+                  <label for="form-name" class="form-label">Family Name</label>
+                  <input type="text" class="form-control-readonly" id="form-name" placeholder="" value="Seehofer" disabled>
+                </div>
+                <div class="col-md-6">
+                  <label for="form-name" class="form-label">Given Name</label>
+                  <input type="text" class="form-control-readonly" id="form-name" placeholder="" value="Kanzler" disabled>
+                </div>
+                <div class="col-md-6">
+                  <label for="form-name" class="form-label">Gender</label>
+                  <input type="text" class="form-control-readonly" id="form-name" placeholder="" value="Male" disabled>
+                </div>
+                <div class="col-md-6">
+                  <label for="form-name" class="form-label">Mailing consent</label>
+                  <div class="form-check m-0">
+                    <input class="form-check-input list-checkbox" type="checkbox" checked="" disabled="">
+                    <label class="form-check-label-label">
+                    &nbsp;
+                    </label>
+                  </div>
+                
+
+
+                  <label for="form-name" class="form-label">Type of Mailing</label>
+                  <input type="text" class="form-control-readonly" id="form-name" placeholder="" value="Newsletter 01" disabled>
+                
+                </div>
+              
+
+
+                <div class="col-md-11">
+                  <label for="form-fields" class="form-label">Form fields</label>
+                  <div class="form-control-plaintext" id="form-fields">
+                    <div>
+                      <span class="badge">email</span>
+                      <span class="badge">name</span>
+                      <span class="badge">given name</span>
+                      <span class="badge">family name</span>
+                      <span class="badge">middle name</span>
+                      <span class="badge">gender</span>
+                      <span class="badge">company</span>
+                      <span class="badge">mailing consent</span>
+                      <span class="badge">type of mailing</span>
+                    </div>
+                  </div>
+                </div>
+
+              </form>
+            </div>
           </div>
 
-          <div class="box-error">
-            <div class="spaceman-lock"></div>
-            <h3>Permissions denied</h3>
-            <p class="text-muted">Please contact your admin.</p>
-          </div>
 
-          
-          <div class="box-error">
-            <div class="success-plane"></div>
-            <h3>Thank you for your form submission!</h3>
-            <p class="text-muted"> We will process your form submission and get back to you within a couple of hours.</p>
-          </div>
 
 
           
@@ -143,10 +204,10 @@
 
     <!-- JR BOTTOMBAR START -->
     <div class="jr-bottombar justify-content-end">
-      <a href="forms-overview.html" class="btn me-auto">Back to overview</a>
-      <div class="btn disabled">Delete Form</div>
+      <a href="forms-detail.html" class="btn me-auto">Back to listing</a>
+      <div class="btn btn-outline-danger">Delete Item</div>
       <div class="btn">Export collected Data</div>
-      <div class="btn btn-primary">Edit Details</div>
+      <div class="btn btn-primary">Edit Item Details</div>
     </div>
     <!-- JR BOTTOMBAR END -->
 

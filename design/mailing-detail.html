@@ -1,0 +1,1015 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Neoletter - Forms Overview</title>
+    <!-- CSS -->
+    <link href="http://localhost:8080/assets/index.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../src/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="../src/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../src/assets/images/favicon.ico">
+    <!-- jQuery for prototyping -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS for prototyping --> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+
+    </script>
+
+
+  </head>
+  <body>
+    
+    <div class="jr-wrapper">
+
+
+    <!-- JR TOPBAR START -->
+    <div class="jr-topbar">
+
+
+      <div class="jr-buttonbar jr-sidebar-toggle" onClick="$(this).toggleClass('open');$('body').toggleClass('jr-sidebar-left-show');">
+        <span class="lines"></span> 
+      </div>
+
+      <div class="jr-buttonbar jr-app-switcher" onClick="$('#test-dropdown-app-switcher').toggleClass('show');$(this).toggleClass('open');">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="jr-buttonbar jr-brand-neoletter"></div>
+
+      <div class="jr-buttonbar jr-user ms-auto" onClick="$(this).children('.dropdown-menu').toggleClass('show');">
+        <i class="jr-icon jr-icon-user"></i>
+        <span class="label user-name">Alexander Geßler
+          <span class="user-meta">alexander.gessler@justrelate.com</span>
+        </span>
+        <div class="dropdown-menu dropdown-menu-end">
+          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-paperplane"></i><span class="label">Make it fly</span></a>
+          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-gear"></i><span class="label">Settings</span></a>
+          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-stats"></i><span class="label">Report</span></a>
+        </div>
+      </div>
+
+
+
+
+    </div>
+    <!-- JR TOPBAR END -->
+
+    <!-- JR MAIN STAGE START -->
+    <div class="jr-main-wrapper">
+      <!-- JR SIDEBAR LEFT START -->
+      <div class="jr-sidebar-left">
+
+        <a href="index.html" class="jr-buttonbar " data-tooltip="Dashbaord" data-flow="right">
+          <i class="jr-icon jr-icon-dashboard"></i>
+          <span class="label">Dashboard</span>
+        </a>
+
+        <a href="forms-overview.html" class="jr-buttonbar" data-tooltip="Forms" data-flow="right">
+          <i class="jr-icon jr-icon-table"></i>
+          <span class="label">Forms</span>
+        </a>
+        <a href="mailings-overview.html" class="jr-buttonbar active" data-tooltip="Mailings" data-flow="right">
+          <i class="jr-icon jr-icon-letter-open"></i>
+          <span class="label">Mailings</span>
+        </a>
+        
+
+      </div>
+      <!-- JR SIDEBAR LEFT END -->
+
+
+      <!-- JR MAIN START -->
+      <main>
+        <div class="container-fluid">
+
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+              <li class="breadcrumb-item"><a href="mailings-overview.html">Mailings Overview</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Mailing Detail</li>
+            </ol>
+          </nav>
+
+
+
+
+
+          <nav>
+            <div class="nav nav-tabs boxless">
+              <div class="nav-link active" data-bs-toggle="tab" data-bs-target="#mailing-overview">Overview</div>
+              <div class="nav-link" data-bs-toggle="tab" data-bs-target="#mailing-report">Report</div>
+            </div>
+          </nav>
+          
+
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="mailing-overview">
+              <!-- FIRST TAB CONTENT START -->
+              <br>
+              <div class="row align-items-stretch">
+
+
+
+
+              <div class="col-sm-12 col-md-12 col-lg-4">
+
+              <h5 class="card-headline">State</h4>
+              <!-- card:start -->
+              <div class="card">
+                <div class="card-body">
+
+
+                  <div class="row">
+
+                    <div class="col-12">
+                      <!-- item -->
+                      <div class="jr-list-item">
+                        <div class="jr-list-group">
+                          <p class="h6 mb-3">Sending counter</p>
+                          <p class="h1 mb-2">72%</p>
+                          <p class="text-meta mb-0">11.782 mailings already sent</p>
+                        </div>
+                        <div class="jr-list-group grow">
+                          <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="sending counter" style="width: 72%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- item -->
+                    </div>
+                    <div class="col-12">
+                      <!-- item -->
+                      <div class="jr-list-item">
+                        <div class="jr-list-group ">
+                          <p class="h6 mb-3">Sending time</p>
+                          <p class="h1 mb-2">> 6 hours</p>
+                          <p class="text-meta mb-0">6 h 25 mins time since start</p>
+                        </div>
+                      </div>
+                      <!-- item -->
+                    </div>
+                    <div class="col-12">
+                      <!-- item -->
+                      <div class="jr-list-item border-top-divider">
+                        <div class="jr-list-group grow">
+                          <p class="h6 mb-0">Info</p>
+                          <p class="text-meta mb-0">Even when all mailings are sent most recipients need 
+                            some time to recognize a new mailing in inbox.
+                            Stat results become trustworthy and comparable 
+                            after 4 days.</p>
+                        </div>
+                      </div>
+                      <!-- item -->
+                    </div>
+
+
+                  </div>
+
+                </div>
+              </div>
+              <!-- card:end -->
+              </div>
+
+
+              <div class="col-sm-12 col-md-12 col-lg-8">
+
+              <h5 class="card-headline">Live Stats</h4>
+              <!-- card:start -->
+              <div class="card">
+                <div class="card-body">
+
+                  <div class="row">
+
+                    <div class="col-6">
+
+                      <!-- item -->
+                      <div class="jr-list-item">
+                        <div class="jr-list-group">
+                          <p class="h6 mb-3">Open Rate</p>
+                          <p class="h1 mb-2">42%</p>
+                          <p class="text-meta mb-0">11.782 impressions</p>
+                        </div>
+                        <div class="jr-list-group ">
+                          
+                          <!-- -->
+
+
+                          <div class="recharts-responsive-container" width="80" height="80" style="width: 80px; height: 80px;">
+                            <div class="recharts-wrapper" style="position: relative; cursor: default; width: 80px; height:80px;">
+                              <svg cx="50%" cy="50%" class="recharts-surface" width="80" height="80" viewBox="45 26 155 155" version="1.1"><defs><clipPath id="recharts90-clip"><rect x="0" y="0" height="200" width="241"></rect></clipPath></defs>
+                                <g class="recharts-layer recharts-pie"><g class="recharts-layer"><g class="recharts-layer recharts-pie-sector">
+                                  <path name="some_name_1" cx="120.5" cy="100" fill="#e3c20d" stroke="#fff" stroke-width="0.2" class="recharts-sector" d="M 190.5,100
+                            A 70,70,0,
+                            1,0,
+                            85.49999999999997,160.6217782649107
+                          L 90.49999999999997,151.96152422706632
+                                    A 60,60,0,
+                                    1,1,
+                                    180.5,100 Z"></path>
+                                  </g>
+                                    <g class="recharts-layer recharts-pie-sector">
+                                      <path name="some_name_2" cx="120.5" cy="100" fill="#eeeeee" stroke="#fff" stroke-width="0.2" class="recharts-sector" d="M 85.49999999999997,160.6217782649107
+                            A 70,70,0,
+                            0,0,
+                            190.5,100.00000000000001
+                          L 180.5,100.00000000000001
+                                    A 60,60,0,
+                                    0,1,
+                                    90.49999999999997,151.96152422706632 Z"></path>
+                                    </g>
+                                  </g>
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        
+                        
+
+                          <!-- -->
+                        </div>
+                      </div>
+                      <!-- item -->
+
+                    </div>
+                    <div class="col-6">
+                      <!-- item -->
+                      <div class="jr-list-item">
+                        <div class="jr-list-group grow">
+                          <p class="h6 mb-3">Click Rate</p>
+                          <p class="h1 mb-2">1,42%</p>
+                          <p class="text-meta mb-0">2862 clicks</p>
+                        </div>
+                      </div>
+                      <!-- item -->
+                    </div>
+                    <div class="col-6">
+                      <!-- item -->
+                      <div class="jr-list-item">
+                        <div class="jr-list-group grow">
+                          <p class="h6 mb-3">Hard Bounces </p>
+                          <p class="h1 mb-2">3,1%</p>
+                          <p class="text-meta mb-0">-10%</p>
+                        </div>
+                      </div>
+                      <!-- item -->
+                    </div>
+                    <div class="col-6">
+                      <!-- item -->
+                      <div class="jr-list-item">
+                        <div class="jr-list-group grow">
+                          <p class="h6 mb-3">Soft Bounces</p>
+                          <p class="h1 mb-2">2,6%</p>
+                          <p class="text-meta mb-0">+2 %</p>
+                        </div>
+                      </div>
+                      <!-- item -->
+                    </div>
+                    <div class="col-6">
+                      <!-- item -->
+                      <div class="jr-list-item">
+                        <div class="jr-list-group grow">
+                          <p class="h6 mb-3">Unsubscription Rate</p>
+                          <p class="h1 mb-2">10,6%</p>
+                          <p class="text-meta mb-0">483 unsubcribed</p>
+                        </div>
+                      </div>
+                      <!-- item -->
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <!-- card:end -->
+              </div>
+
+
+              </div>
+
+
+
+              <h5 class="mt-3">Details</h4>
+
+              <!-- card:start -->
+              <div class="card">
+              <div class="card-body">
+
+              <form class="readonly-mode">
+
+                <div class="row g-3 ">
+                  <div class="col-lg-3">
+                    <div class="mb-2">
+                      <h4 class="mb-0">Meta Details</h4>
+                      <div class="form-text">Meta information which set main purpose
+                        and set up lorem ipsom the right way.</div>
+                    </div>
+
+                  </div>
+                  <div class="col-lg">
+                    <div class="mb-2">
+                      <label for="form-type" class="form-label">Title of Mailing</label>
+                      <div type="text" class="form-control-plaintext" id="form-type">Newsletter Autumn 2022</div>
+                    </div>
+                    <div class="mb-2">
+                      <label for="form-title" class="form-label">Subject</label>
+                      <div type="text" class="form-control-plaintext" id="form-title">News Autumn 2022</div>
+                    </div>
+                    <div class="mb-2">
+                      <label for="form-created" class="form-label">Created on</label>
+                      <div class="form-control-plaintext" id="form-created">Feb 18, 2022 at 13:50</div>
+                    </div>
+                    <div class="mb-2">
+                      <label for="form-created" class="form-label">Template</label>
+                      <div class="form-control-plaintext" id="form-created">Mailing 2022</div>
+                    </div>
+
+                  </div>
+                  <div class="col-lg">
+
+                    <div class="mb-2">
+                      <label for="sender-email" class="form-label">Sender email</label>
+                      <div class="form-control-plaintext" id="sender-email">marketing@justrelate.com</div>
+                    </div>
+                    <div class="mb-2">
+                      <label for="sender-email" class="form-label">Contact list</label>
+                      <div class="form-control-plaintext" id="sender-email">Pisa-segment-43</div>
+                    </div>
+                    <div class="mb-2">
+                      <label for="sender-email" class="form-label">Language</label>
+                      <div class="form-control-plaintext" id="sender-email">Deutsch</div>
+                    </div>
+                  </div>
+                </div>
+
+              </form>
+
+              </div>
+              </div>
+              <!-- card:end -->
+
+
+              <h5 class="mt-3">Preview</h4>
+
+              <!-- card:start -->
+              <div class="card">
+              <div class="card-body">
+
+
+                <div class="btn-group mb-3" role="group" aria-label="toggle button group">
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" onClick="$('#preview-iframe').toggleClass('large mobile');">
+                  <label class="btn btn-sm btn-outline-primary m-0" for="btnradio1">Mobile</label>         
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" onClick="$('#preview-iframe').toggleClass('large mobile');" checked>
+                  <label class="btn btn-sm btn-outline-primary" for="btnradio2">Desktop</label>
+                </div>
+
+
+                <div class="preview-iframe-wrapper large" id="preview-iframe">
+                  <iframe class="preview-iframe" src="mails/mail-form-submisson-contents.html"></iframe>
+                </div>
+
+              </div>
+              </div>
+
+
+
+              <!-- FIRST TAB CONTENT END -->
+            </div>
+            <div class="tab-pane fade" id="mailing-report">
+              <!-- SECOND TAB CONTENT START -->
+            
+
+              <h5 class="mt-3">Link Tracking (still counting)</h4>
+
+                <!-- card:start -->
+                <div class="card">
+                  <div class="card-body">
+
+                    <div class="row">
+
+                      <div class="col-12 col-sm-6 col-md-4">
+                        <!-- item -->
+                        <div class="jr-list-item">
+                          <div class="jr-list-group grow">
+                            <p class="h6 text-small mb-3">Unsubscribe link</p>
+                            <p class="h1 mb-2">1%</p>
+                            <p class="text-meta mb-0">72 clicks</p>
+                          </div>
+                        </div>
+                        <!-- item -->
+                      </div>
+
+                      <div class="col-12 col-sm-6 col-md-4">
+                        <!-- item -->
+                        <div class="jr-list-item">
+                          <div class="jr-list-group grow">
+                            <p class="h6 text-small mb-3"><a href="">https://www.iubenda.com/privacy-policy/49159983</a></p>
+                            <p class="h1 mb-2">1%</p>
+                            <p class="text-meta mb-0">42 clicks</p>
+                          </div>
+                        </div>
+                        <!-- item -->
+                      </div>
+
+                      <div class="col-12 col-sm-6 col-md-4">
+                        <!-- item -->
+                        <div class="jr-list-item">
+                          <div class="jr-list-group grow">
+                            <p class="h6 text-small mb-3"><a href="">https://www.justrelate.com</a></p>
+                            <p class="h1 mb-2">5%</p>
+                            <p class="text-meta mb-0">2.172 clicks</p>
+                          </div>
+                        </div>
+                        <!-- item -->
+                      </div>
+
+                      <div class="col-12 col-sm-6 col-md-4">
+                        <!-- item -->
+                        <div class="jr-list-item">
+                          <div class="jr-list-group grow">
+                            <p class="h6 text-small mb-3"><a href="">https://www.infopark.de</a></p>
+                            <p class="h1 mb-2">1%</p>
+                            <p class="text-meta mb-0">12 clicks</p>
+                          </div>
+                        </div>
+                        <!-- item -->
+                      </div>
+
+                      <div class="col-12 col-sm-6 col-md-4">
+                        <!-- item -->
+                        <div class="jr-list-item">
+                          <div class="jr-list-group grow">
+                            <p class="h6 text-small mb-3"><a href="">https://www.justrelate.com/de/cms/ueberblick</a></p>
+                            <p class="h1 mb-2">2%</p>
+                            <p class="text-meta mb-0">978 clicks</p>
+                          </div>
+                        </div>
+                        <!-- item -->
+                      </div>
+
+                      <div class="col-12 col-sm-6 col-md-4">
+                        <!-- item -->
+                        <div class="jr-list-item">
+                          <div class="jr-list-group grow">
+                            <p class="h6 text-small mb-3"><a href="">https://www.scrivito.com/</a></p>
+                            <p class="h1 mb-2">1%</p>
+                            <p class="text-meta mb-0">42 clicks</p>
+                          </div>
+                        </div>
+                        <!-- item -->
+                      </div>
+
+                      <div class="col-12 col-sm-6 col-md-4">
+                        <!-- item -->
+                        <div class="jr-list-item">
+                          <div class="jr-list-group grow">
+                            <p class="h6 text-small mb-3"><a href="">https://www.justrelate.com/de/transparente-information</a></p>
+                            <p class="h1 mb-2">3%</p>
+                            <p class="text-meta mb-0">1.272 clicks</p>
+                          </div>
+                        </div>
+                        <!-- item -->
+                      </div>
+
+                    </div>
+
+
+
+                  </div>
+                </div>
+
+                
+              <h5 class="mt-3">Delivery Report Details</h4>
+
+                <!-- card:start -->
+                <div class="card">
+                  <div class="card-body">
+                    
+                    <div class="row">
+
+
+                      <div class="col">
+                        <div class="jr-list-item btn-filter active">
+                          <div class="jr-list-group grow">
+                            <p class="h6 text-small mb-1">All Recipients</p>
+                            <p class="h3 mb-1">32.352</p>
+                            <p class="text-small text-meta mb-0">100%</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="jr-list-item btn-filter">
+                          <div class="jr-list-group grow">
+                            <p class="h6 text-small mb-1">Delivered</p>
+                            <p class="h3 mb-1">24.352</p>
+                            <p class="text-small text-meta mb-0">73%</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="jr-list-item btn-filter ">
+                          <div class="jr-list-group grow">
+                            <p class="h6 text-small mb-1">Opened</p>
+                            <p class="h3 mb-1">22.055</p>
+                            <p class="text-small text-meta mb-0">66%</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="jr-list-item btn-filter ">
+                          <div class="jr-list-group grow">
+                            <p class="h6 text-small mb-1">Clicked</p>
+                            <p class="h3 mb-1">2.535</p>
+                            <p class="text-small text-meta mb-0">5%</p>
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="col">
+                        <div class="jr-list-item btn-filter ">
+                          <div class="jr-list-group grow">
+                            <p class="h6 text-small mb-1">Bounced</p>
+                            <p class="h3 mb-1">1.002</p>
+                            <p class="text-small text-meta mb-0">2%</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="jr-list-item btn-filter ">
+                          <div class="jr-list-group grow">
+                            <p class="h6 text-small mb-1">Skipped</p>
+                            <p class="h3 mb-1">9.352</p>
+                            <p class="text-small text-meta mb-0">29%</p>
+                          </div>
+                        </div>
+                      </div>
+
+
+                    </div>
+
+
+
+
+                  </div>
+
+
+              
+
+                  <div class="responsive-stacked">
+                    <table class="table table-hover mb-0">
+                      <thead>
+                        <tr>
+                          <th>
+                            <a href="#" class="text-muted">
+                              Email
+                            </a>
+                          </th>
+                          <th>
+                            <a href="#" class="text-muted">
+                              consent
+                            </a>
+                          </th>
+                          <th>
+                            <a href="#" class="text-muted">
+                              Person
+                            </a>
+                          </th>
+                          <th>
+                            <a href="#" class="text-muted">
+                              State
+                            </a>
+                          </th>
+                          <th>
+                            <a href="#" class="text-muted">
+                              id
+                            </a>
+                          </th>
+                          <th>
+                            <a href="#" class="text-muted">
+                              variables
+                            </a>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+      
+                        <tr>
+                          <td data-label="email">
+                            <span class="text-small"><del>kurlvink@pinuts.de</del></span>
+                          </td>
+                          <td data-label="consent">
+                            <span class="badge bg-grey">unknown</span>
+                          </td>
+                          <td data-label="person">
+                            <span class="text-small">Kurlvink, Oliver</span>
+                          </td>
+                          <td data-label="state">
+                            <span class="badge bg-yellow" title="was not delivered because the recipient email address was inactive or the required consent was missing">skipped</span>
+                          </span>
+                          </td>
+                          <td data-label="id">
+                            <span class="text-small text-meta">09b04656338e9af6640d6d176d8ef90f</span>
+                          </td>
+                          <td data-label="variables ">
+                            <span class="badge">Herr Kurlvink</span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td data-label="email">
+                            <span class="text-small">m.heine@rz.uni-frankfurt.de</span>
+                          </td>
+                          <td data-label="consent">
+                            <span class="badge bg-green">given</span>
+                          </td>
+                          <td data-label="person">
+                            <span class="text-small">Heine, Marten</span>
+                          </td>
+                          <td data-label="state">
+                            <span class="badge bg-green" title="ok">delivered</span>
+                          </span>
+                          </td>
+                          <td data-label="id">
+                            <span class="text-small text-meta">908d0997157b0514dc6d78724dc9a1c6</span>
+                          </td>
+                          <td data-label="variables ">
+                            <span class="badge">Herr Heine</span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td data-label="email">
+                            <span class="text-small">esther.tirado@ses-global.com </span>
+                          </td>
+                          <td data-label="consent">
+                            <span class="badge bg-green">given</span>
+                          </td>
+                          <td data-label="person">
+                            <span class="text-small">Tirado, Esther</span>
+                          </td>
+                          <td data-label="state">
+                            <span class="badge bg-red" title="temporarily undeliverable">bounced</span>
+                          </span>
+                          </td>
+                          <td data-label="id">
+                            <span class="text-small text-meta">108d0997157b0514dc6d78724dc2a1c6</span>
+                          </td>
+                          <td data-label="variables ">
+                            <span class="badge">Frau Tirado </span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td data-label="email">
+                            <span class="text-small">michael.huettenkofer@munich-airport.de</span>
+                          </td>
+                          <td data-label="consent">
+                            <span class="badge bg-green">given</span>
+                          </td>
+                          <td data-label="person">
+                            <span class="text-small">Heine, Marten</span>
+                          </td>
+                          <td data-label="state">
+                            <span class="badge bg-green" title="ok">delivered</span><span class="badge" title="ok">opened</span>
+                          </span>
+                          </td>
+                          <td data-label="id">
+                            <span class="text-small text-meta">908d0997157b0514dc6d78724dc9a1c6</span>
+                          </td>
+                          <td data-label="variables ">
+                            <span class="badge">Herr Heine</span>
+                          </td>
+                        </tr>
+      
+                        <tr>
+                          <td data-label="email">
+                            <span class="text-small">hans.dampf@airport.de</span>
+                          </td>
+                          <td data-label="consent">
+                            <span class="badge bg-red">withdrawn</span>
+                          </td>
+                          <td data-label="person">
+                            <span class="text-small">Dampf, Hans</span>
+                          </td>
+                          <td data-label="state">
+                            <span class="badge bg-green" title="ok">delivered</span>
+                            <span class="badge" title="ok">opened</span>
+                            <span class="badge" title="ok">clicked</span>
+                          </span>
+                          </td>
+                          <td data-label="id">
+                            <span class="text-small text-meta">908d0997157b0514dc6d78724dc9a1c6</span>
+                          </td>
+                          <td data-label="variables ">
+                            <span class="badge">Herr Dampf</span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td data-label="email">
+                            <span class="text-small"><del>kurlvink@pinuts.de</del></span>
+                          </td>
+                          <td data-label="consent">
+                            <span class="badge bg-grey">unknown</span>
+                          </td>
+                          <td data-label="person">
+                            <span class="text-small">Kurlvink, Oliver</span>
+                          </td>
+                          <td data-label="state">
+                            <span class="badge bg-yellow" title="was not delivered because the recipient email address was inactive or the required consent was missing">skipped</span>
+                          </span>
+                          </td>
+                          <td data-label="id">
+                            <span class="text-small text-meta">09b04656338e9af6640d6d176d8ef90f</span>
+                          </td>
+                          <td data-label="variables ">
+                            <span class="badge">Herr Kurlvink</span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td data-label="email">
+                            <span class="text-small">m.heine@rz.uni-frankfurt.de</span>
+                          </td>
+                          <td data-label="consent">
+                            <span class="badge bg-green">given</span>
+                          </td>
+                          <td data-label="person">
+                            <span class="text-small">Heine, Marten</span>
+                          </td>
+                          <td data-label="state">
+                            <span class="badge bg-green" title="ok">delivered</span>
+                          </span>
+                          </td>
+                          <td data-label="id">
+                            <span class="text-small text-meta">908d0997157b0514dc6d78724dc9a1c6</span>
+                          </td>
+                          <td data-label="variables ">
+                            <span class="badge">Herr Heine</span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td data-label="email">
+                            <span class="text-small">esther.tirado@ses-global.com </span>
+                          </td>
+                          <td data-label="consent">
+                            <span class="badge bg-green">given</span>
+                          </td>
+                          <td data-label="person">
+                            <span class="text-small">Tirado, Esther</span>
+                          </td>
+                          <td data-label="state">
+                            <span class="badge bg-red" title="temporarily undeliverable">bounced</span>
+                          </span>
+                          </td>
+                          <td data-label="id">
+                            <span class="text-small text-meta">108d0997157b0514dc6d78724dc2a1c6</span>
+                          </td>
+                          <td data-label="variables ">
+                            <span class="badge">Frau Tirado </span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td data-label="email">
+                            <span class="text-small">michael.huettenkofer@munich-airport.de</span>
+                          </td>
+                          <td data-label="consent">
+                            <span class="badge bg-green">given</span>
+                          </td>
+                          <td data-label="person">
+                            <span class="text-small">Heine, Marten</span>
+                          </td>
+                          <td data-label="state">
+                            <span class="badge bg-green" title="ok">delivered</span><span class="badge" title="ok">opened</span>
+                          </span>
+                          </td>
+                          <td data-label="id">
+                            <span class="text-small text-meta">908d0997157b0514dc6d78724dc9a1c6</span>
+                          </td>
+                          <td data-label="variables ">
+                            <span class="badge">Herr Heine</span>
+                          </td>
+                        </tr>
+      
+                        <tr>
+                          <td data-label="email">
+                            <span class="text-small">hans.dampf@airport.de</span>
+                          </td>
+                          <td data-label="consent">
+                            <span class="badge bg-red">withdrawn</span>
+                          </td>
+                          <td data-label="person">
+                            <span class="text-small">Dampf, Hans</span>
+                          </td>
+                          <td data-label="state">
+                            <span class="badge bg-green" title="ok">delivered</span>
+                            <span class="badge" title="ok">opened</span>
+                            <span class="badge" title="ok">clicked</span>
+                          </span>
+                          </td>
+                          <td data-label="id">
+                            <span class="text-small text-meta">908d0997157b0514dc6d78724dc9a1c6</span>
+                          </td>
+                          <td data-label="variables ">
+                            <span class="badge">Herr Dampf</span>
+                          </td>
+                        </tr>
+      
+
+                        <tr>
+                          <td data-label="email">
+                            <span class="text-small"><del>kurlvink@pinuts.de</del></span>
+                          </td>
+                          <td data-label="consent">
+                            <span class="badge bg-grey">unknown</span>
+                          </td>
+                          <td data-label="person">
+                            <span class="text-small">Kurlvink, Oliver</span>
+                          </td>
+                          <td data-label="state">
+                            <span class="badge bg-yellow" title="was not delivered because the recipient email address was inactive or the required consent was missing">skipped</span>
+                          </span>
+                          </td>
+                          <td data-label="id">
+                            <span class="text-small text-meta">09b04656338e9af6640d6d176d8ef90f</span>
+                          </td>
+                          <td data-label="variables ">
+                            <span class="badge">Herr Kurlvink</span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td data-label="email">
+                            <span class="text-small">m.heine@rz.uni-frankfurt.de</span>
+                          </td>
+                          <td data-label="consent">
+                            <span class="badge bg-green">given</span>
+                          </td>
+                          <td data-label="person">
+                            <span class="text-small">Heine, Marten</span>
+                          </td>
+                          <td data-label="state">
+                            <span class="badge bg-green" title="ok">delivered</span>
+                          </span>
+                          </td>
+                          <td data-label="id">
+                            <span class="text-small text-meta">908d0997157b0514dc6d78724dc9a1c6</span>
+                          </td>
+                          <td data-label="variables ">
+                            <span class="badge">Herr Heine</span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td data-label="email">
+                            <span class="text-small">esther.tirado@ses-global.com </span>
+                          </td>
+                          <td data-label="consent">
+                            <span class="badge bg-green">given</span>
+                          </td>
+                          <td data-label="person">
+                            <span class="text-small">Tirado, Esther</span>
+                          </td>
+                          <td data-label="state">
+                            <span class="badge bg-red" title="temporarily undeliverable">bounced</span>
+                          </span>
+                          </td>
+                          <td data-label="id">
+                            <span class="text-small text-meta">108d0997157b0514dc6d78724dc2a1c6</span>
+                          </td>
+                          <td data-label="variables ">
+                            <span class="badge">Frau Tirado </span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td data-label="email">
+                            <span class="text-small">michael.huettenkofer@munich-airport.de</span>
+                          </td>
+                          <td data-label="consent">
+                            <span class="badge bg-green">given</span>
+                          </td>
+                          <td data-label="person">
+                            <span class="text-small">Heine, Marten</span>
+                          </td>
+                          <td data-label="state">
+                            <span class="badge bg-green" title="ok">delivered</span><span class="badge" title="ok">opened</span>
+                          </span>
+                          </td>
+                          <td data-label="id">
+                            <span class="text-small text-meta">908d0997157b0514dc6d78724dc9a1c6</span>
+                          </td>
+                          <td data-label="variables ">
+                            <span class="badge">Herr Heine</span>
+                          </td>
+                        </tr>
+      
+                        <tr>
+                          <td data-label="email">
+                            <span class="text-small">hans.dampf@airport.de</span>
+                          </td>
+                          <td data-label="consent">
+                            <span class="badge bg-red">withdrawn</span>
+                          </td>
+                          <td data-label="person">
+                            <span class="text-small">Dampf, Hans</span>
+                          </td>
+                          <td data-label="state">
+                            <span class="badge bg-green" title="ok">delivered</span>
+                            <span class="badge" title="ok">opened</span>
+                            <span class="badge" title="ok">clicked</span>
+                          </span>
+                          </td>
+                          <td data-label="id">
+                            <span class="text-small text-meta">908d0997157b0514dc6d78724dc9a1c6</span>
+                          </td>
+                          <td data-label="variables ">
+                            <span class="badge">Herr Dampf</span>
+                          </td>
+                        </tr>
+      
+      
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+
+              <!-- SECOND TAB CONTENT END -->
+            </div>
+          </div>
+
+
+
+
+
+
+
+          
+
+
+      </main>
+      <!-- JR MAIN END -->
+
+      <!-- JR SIDEBAR RIGHT START -->
+      <div class="jr-sidebar-right" style="display: none;">
+        <div class="jr-buttonbar" data-tooltip="Info" data-flow="left"><i class="jr-icon jr-icon-info""></i></div>
+        <div class="jr-buttonbar" data-tooltip="Edit here" data-flow="left"><i class="jr-icon jr-icon-pen"></i></div>
+        <div class="jr-buttonbar mt-auto" data-tooltip="Lightning" data-flow="left"><i class="jr-icon jr-icon-lightning"></i></div>
+      </div>
+      <!-- JR SIDEBAR RIGHT END -->
+    </div>
+    <!-- JR MAIN STAGE END -->
+
+    <!-- JR BOTTOMBAR START -->
+    <div class="jr-bottombar justify-content-end" style="display: none;">
+      <div class="btn me-auto">Cancel</div>
+      <div class="btn disabled">Save Draft</div>
+      <div class="btn btn-primary">Define Settings</div>
+    </div>
+    <!-- JR BOTTOMBAR END -->
+
+   
+
+    <ul class="dropdown-menu" id="test-dropdown-settings" data-popper-placement="right-end" style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(149px, -38px);">
+      <li><a class="dropdown-item" href="#"><i class="jr-icon jr-icon-paperplane"></i><span class="label">Action</span></a></li>
+      <li><a class="dropdown-item" href="#"><i class="jr-icon jr-icon-gear"></i><span class="label">Settings</span></a></li>
+      <li><a class="dropdown-item disabled" href="#"><i class="jr-icon jr-icon-book"></i><span class="label">Hidden option</span></a></li>
+      <li><a class="dropdown-item" href="#"><i class="jr-icon jr-icon-megaphone"></i><span class="label">Start campaign</span></a></li>
+      <li><a class="dropdown-item" href="#"><i class="jr-icon jr-icon-fire"></i><span class="label">Something else here with too much content</span></a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><div class="dropdown-item" onClick="$('body').toggleClass('jr-sidebar-left-label-hide');"><i class="jr-icon jr-icon-gear"></i><span class="label">Toggle sidebar labels</span></div></li>
+      <li><div class="dropdown-item" onClick="$('body').toggleClass('jr-zen-mode');"><i class="jr-icon jr-icon-fire"></i><span class="label">Zen Mode</span></div></li>
+
+    </ul>
+
+    <ul class="dropdown-menu" id="test-dropdown-app-switcher" data-popper-placement="top-left" style="position: absolute; inset: 0 auto auto 0 ; margin: 0px; transform: translate(0, 42px);">
+      <li><div class="dropdown-item"><span class="label jr-brand-dxhub"></span></div></li>
+      <li><div class="dropdown-item"><span class="label jr-brand-neoletter"></span></div></li>
+      <li><div class="dropdown-item"><span class="label jr-brand-scrivito"></span></div></li>
+      <li><div class="dropdown-item"><span class="label jr-brand-pisa"></span></div></li>
+    </ul>
+
+
+    </div>
+
+  </body>
+</html>
