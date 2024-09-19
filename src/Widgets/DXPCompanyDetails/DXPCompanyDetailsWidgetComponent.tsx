@@ -1,35 +1,65 @@
+import React from 'react'
+
+import { useForm } from 'react-hook-form'
 import {
   navigateTo,
   Obj,
   provideComponent,
   useDataItem,
   ClientError,
+  DataItem,
 } from 'scrivito'
-import { DXPCompanyWidget } from './DXPCompanyDetailsWidgetClass'
-import { ensureString } from '@/utils/ensureString'
+
 import { BottomBar, Button, Field } from '@justrelate/jr-ui-components'
-import { useState } from 'react'
-import { useForm } from 'react-hook-form'
+import { ensureString } from '@/utils/ensureString'
 import { Schema } from '@/Data/Schema/SchemaDataClass'
 import { Loading } from '@/Components/Loading'
+import companyImage from '@/assets/images/profile-organisation.svg'
+import { DXPCompanyWidget } from './DXPCompanyDetailsWidgetClass'
+
+export interface SchemaGeneral {
+  title: string
+  icon: string
+  groupOrder: string[]
+}
+
+export interface SchemaGroups {
+  [key: string]: {
+    title: string
+    attributeOrder: string[]
+  }
+}
 
 provideComponent(
   DXPCompanyWidget,
   () => {
-    let schema
+    let schema: DataItem | undefined
+    let orderedAttributes
     let error
+
+    const orderSchema = (schema?: DataItem) => {
+      if (!schema) return
+      const schemaGeneral = schema.get('general') as SchemaGeneral
+      const groupOrder = schemaGeneral.groupOrder
+      const orderedAttributes = groupOrder.flatMap((e) => {
+        const schemaGroups = schema.get('groups') as SchemaGroups
+        return schemaGroups[e]?.attributeOrder
+      })
+      return orderedAttributes
+    }
+
     try {
       schema = Schema.all()
         .transform({ filters: { name: 'company' } })
         .take()[0]
-        ?.get('attributes')
+
+      orderedAttributes = orderSchema(schema)
     } catch (err) {
       error = err
       // Probably report the error to honeybadger
       console.error(err)
     }
-    console.log(schema)
-    const [editing, setEditing] = useState(false)
+    const [editing, setEditing] = React.useState(false)
 
     const company = useDataItem()
 
@@ -82,7 +112,11 @@ provideComponent(
                   <div className="col-md-5">
                     <div className="d-flex">
                       <div className="flex-shrink-0">
-                        <img className="img-profile cover" src="" />
+                        <img
+                          className="img-profile cover"
+                          src={companyImage}
+                          alt="Company Stock"
+                        />
                       </div>
                       <div className="flex-grow-1 m-auto ms-3">
                         <div className="card-headline">
@@ -106,7 +140,7 @@ provideComponent(
           <div className="col-sm-12 col-md-12 col-lg-5">
             {/* Headline */}
             <div className="card-headline">
-              <h6 className="m0">Headline</h6>
+              <h6 className="m0">Organization</h6>
               <span className="btn-headline">
                 <div className="btn-headline-group ms-auto">
                   <Button
@@ -126,7 +160,8 @@ provideComponent(
             <div className="card mb-3">
               {/* Card body */}
               <div className="card-body readonly-mode">
-                {Object.keys(schema as object).map((key) => {
+                {orderedAttributes?.map((key) => {
+                  if (!key) return
                   if (editing) {
                     return (
                       <form
@@ -157,10 +192,15 @@ provideComponent(
                         <label className="form-label">{key}</label>
                         <div className="form-control-plaintext hover-edit">
                           {ensureString(company?.get(key))}
-                          <i
-                            className="jr-icon jr-icon-pen"
+                          <button
                             onClick={() => setEditing(true)}
-                          />
+                            style={{
+                              background: 'transparent',
+                              border: 'none',
+                            }}
+                          >
+                            <i className="jr-icon jr-icon-pen" />
+                          </button>
                         </div>
                       </div>
                     </section>

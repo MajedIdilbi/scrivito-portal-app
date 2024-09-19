@@ -1,4 +1,4 @@
-import React, { useRef, useState, useContext } from 'react'
+import React from 'react'
 import {
   DataItem,
   LinkTag,
@@ -24,9 +24,9 @@ provideComponent(
   DXPCompaniesWidget,
   () => {
     const dataScope = useData()
-    const searchRef = useRef<HTMLInputElement>(null)
-    const [searchValue, setSearchValue] = useState('')
-    const { setSearch } = useContext(DataBatchContext)
+    const searchRef = React.useRef<HTMLInputElement>(null)
+    const [searchValue, setSearchValue] = React.useState('')
+    const { setSearch } = React.useContext(DataBatchContext)
     let dataError: unknown
 
     try {
