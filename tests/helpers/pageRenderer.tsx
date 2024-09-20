@@ -17,21 +17,21 @@ class PageRenderer {
     this._pageClass = pageClass;
   }
 
-  private _getContentTag(configuration: any = {}) {
+  private _getContentTag(configuration: any = {}, dataScope: Scrivito.DataScope | undefined = undefined) {
     const page = this._pageClass.create(configuration);
     (Scrivito as any).__setCurrentPage(page);
 
-    return <Scrivito.ContentTag tag="div" content={page} attribute="body" />;
+    return <Scrivito.ContentTag tag="div" content={page} attribute="body" dataContext={dataScope}/>;
   }
 
-  render(configuration: any = {}) {
-    const content = this._getContentTag(configuration);
+  render(configuration: any = {}, dataScope: Scrivito.DataScope | undefined = undefined) {
+    const content = this._getContentTag(configuration, dataScope);
 
     return render(content);
   }
 
-  getAsJSON(configuration: any = {}) {
-    const content = this._getContentTag(configuration);
+  getAsJSON(configuration: any = {}, dataScope: Scrivito.DataScope | undefined = undefined) {
+    const content = this._getContentTag(configuration, dataScope);
 
     return renderer.create(content).toJSON();
   }

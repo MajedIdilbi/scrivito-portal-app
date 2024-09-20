@@ -1,11 +1,12 @@
 import "@testing-library/jest-dom";
 import * as Scrivito from "scrivito";
-import { screen } from "@testing-library/react";
+import { act, screen } from "@testing-library/react";
 import { DataWidget } from "../../src/Widgets/DataWidget/DataWidgetClass";
 import { TextWidget } from "../../src/Widgets/TextWidget/TextWidgetClass";
 import PageRenderer from "../helpers/pageRenderer";
 import "../../src/Widgets/DataWidget/DataWidgetComponent";
 import "../../src/Widgets/TextWidget/TextWidgetComponent";
+import { Employee } from "../../src/Data/Employee/EmployeeDataClass"
 
 Scrivito.configure({ tenant: "inMemory" });
 
@@ -24,14 +25,19 @@ describe("DataWidget", () => {
         content: [new TextWidget(textWidgetProps)],
       }
   
-      pageRenderer.render({
-        body: [new DataWidget(DataWidgetProps)]
+      await act(async () => {
+        pageRenderer.render({
+          body: [new DataWidget(DataWidgetProps)]
+        }, Employee.all());
       });
+
+      await act(() => new Promise((resolve) => setTimeout(resolve, 1000)));
+      console.log(document.documentElement.outerHTML); // Log the entire HTML document to the console
     });
 
-    test.skip("shows the text content", () => {
+    test("shows the text content", () => {
       expect(
-          screen.queryByText(text)
+          screen.queryAllByText(text)[0]
         ).toBeInTheDocument();
     });
   });
