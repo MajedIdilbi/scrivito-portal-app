@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import * as Scrivito from "scrivito";
-import { act, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import { DataWidget } from "../../src/Widgets/DataWidget/DataWidgetClass";
 import { TextWidget } from "../../src/Widgets/TextWidget/TextWidgetClass";
 import PageRenderer from "../helpers/pageRenderer";
@@ -25,19 +25,14 @@ describe("DataWidget", () => {
         content: [new TextWidget(textWidgetProps)],
       }
   
-      await act(async () => {
-        pageRenderer.render({
-          body: [new DataWidget(DataWidgetProps)]
-        }, Employee.all());
-      });
-
-      await act(() => new Promise((resolve) => setTimeout(resolve, 1000)));
-      console.log(document.documentElement.outerHTML); // Log the entire HTML document to the console
+      pageRenderer.render({
+        body: [new DataWidget(DataWidgetProps)]
+      }, Employee.all());
     });
 
-    test("shows the text content", () => {
+    test("shows the text content", async () => {
       expect(
-          screen.queryAllByText(text)[0]
+          (await screen.findAllByText(text))[0]
         ).toBeInTheDocument();
     });
   });
