@@ -6,7 +6,7 @@ import { TextWidget } from "../../src/Widgets/TextWidget/TextWidgetClass";
 import PageRenderer from "../helpers/pageRenderer";
 import "../../src/Widgets/DataWidget/DataWidgetComponent";
 import "../../src/Widgets/TextWidget/TextWidgetComponent";
-import { Employee } from "../../src/Data/Employee/EmployeeDataClass"
+import { Employee } from "../Data/Employee/EmployeeDataClass"
 
 Scrivito.configure({ tenant: "inMemory" });
 
