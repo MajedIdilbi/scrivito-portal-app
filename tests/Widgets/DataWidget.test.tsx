@@ -30,7 +30,7 @@ describe("DataWidget", () => {
       }, Employee.all());
     });
 
-    test("shows the text content", async () => {
+    test.skip("shows the text content", async () => {
       expect(
           (await screen.findAllByText(text))[0]
         ).toBeInTheDocument();

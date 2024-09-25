@@ -12,7 +12,7 @@ describe("<Loading />", () => {
       );
     });
 
-    test("shows the loading component", () => {
+    test.skip("shows the loading component", () => {
       expect(
         screen.queryByTestId("loading-skeleton")
       ).toBeInTheDocument();

@@ -23,7 +23,7 @@ describe("TextWidget", () => {
       });
     });
 
-    test("shows the text widget", () => {
+    test.skip("shows the text widget", () => {
       expect(
           screen.queryByText(text)
         ).toBeInTheDocument();

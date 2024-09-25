@@ -94,6 +94,9 @@
     },
     "setupFilesAfterEnv": [
       "<rootDir>/tests/setup-tests.ts"
-    ]
+    ],
+    "moduleNameMapper": {
+      "^@/(.*)": "<rootDir>/src/$1"
+    }
   }
 }
