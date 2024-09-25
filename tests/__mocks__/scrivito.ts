@@ -3,7 +3,7 @@ import { mockUiContext, validationResults } from "../helpers/testData";
 const originalModule = jest.requireActual("scrivito");
 let mockedCurrentPage = Object.create(null);
 
-module.exports = {
+const mockedModule = {
   ...originalModule,
   isInPlaceEditingActive: jest.fn().mockReturnValue(false),
   __setCurrentPage: (page: unknown) => (mockedCurrentPage = page),
@@ -13,5 +13,9 @@ module.exports = {
   validationResultsFor: jest.fn().mockReturnValue(validationResults),
   uiContext: jest.fn().mockReturnValue(mockUiContext),
   canWrite: jest.fn().mockReturnValue(true),
-  getInstanceId: jest.fn().mockReturnValue("123")
-};
+  getInstanceId: jest.fn().mockReturnValue("123"),
+  LinkTag: jest.fn().mockReturnValue(null)
+}
+mockedModule.Obj.getByPermalink = jest.fn().mockReturnValue(null);
+
+module.exports = mockedModule;
