@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<style>
+* {
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.6em;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 600px;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+  -webkit-text-size-adjust: none;
+  width: 100% !important;
+  background: #F2F1F0; 
+  color: #495054;
+}
+
+a {
+  color: #E3C20D;
+}
+
+table table.btn-primary {
+  margin-bottom: 10px;
+  width: auto;
+}
+
+.btn-primary td {
+  background-color: #495054;
+  border-radius: 25px;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  vertical-align: top;
+}
+
+.btn-primary td a {
+  background-color: #495054;
+  border: solid 1px #495054;
+  border-radius: 3px;
+  border-width: 2px 15px;
+  display: inline-block;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 2;
+  text-decoration: none;
+}
+
+.last {
+  margin-bottom: 0;
+}
+
+.first {
+  margin-top: 0;
+}
+
+.padding {
+  padding: 10px 0;
+}
+
+
+table.body-wrap {
+  padding: 20px;
+  width: 100%;
+}
+
+table.body-wrap .container {
+  border-top: 5px solid #E3C20D;
+  border-radius: 10px; padding: 25px; 
+  box-shadow: 0 8px 26px -4px rgba(20, 20, 20, 0.15), 0 8px 9px -5px rgba(20, 20, 20, 0.06);
+}
+
+table.footer-wrap {
+  clear: both !important;
+  width: 100%;
+}
+
+.footer-wrap .container p {
+  color: #999999;
+  font-size: 12px;
+}
+
+table.footer-wrap a {
+  color: #999999;
+}
+
+.small-table th,
+.small-table td {
+  font-size: 14px;
+  padding: 2px 8px 2px 0;
+  text-align: left;
+}
+.small-table th {
+  width: 1%;
+  white-space: nowrap;
+}
+
+h1,
+h2,
+h3 {
+  color: #495054;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  line-height: 1.2em;
+  margin: 10px 0;
+}
+
+h1 {
+  font-size: 36px;
+}
+h2 {
+  font-size: 28px;
+}
+h3 {
+  font-size: 22px;
+}
+
+p,
+ul,
+ol {
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+ul li,
+ol li {
+  margin-left: 5px;
+  list-style-position: inside;
+}
+
+/* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+.container {
+  clear: both !important;
+  display: block !important;
+  Margin: 0 auto !important;
+  max-width: 600px !important;
+}
+
+/* Set the padding on the td rather than the div for Outlook compatibility */
+.body-wrap .container {
+  padding: 20px;
+}
+
+/* This should also be a block element, so that it will fill 100% of the .container */
+.content {
+  display: block;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* Let's make sure tables in the content area are 100% wide */
+.content table {
+  width: 100%;
+}
+
+</style>
+</head>
+
+<body bgcolor="#F2F1F0">
+
+<table class="body-wrap" bgcolor="#F2F1F0">
+  <tr>
+    <td></td>
+    <td class="container" bgcolor="#FFFFFF">
+      <div class="content">
+        <table>
+          <tr>
+            <td>
+
+              <p
+              style="text-align: center;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%; margin-bottom: 30px;">
+                <a href="#">
+                  <img
+                    src="neoletter-logo-color.png"
+                    width="160" height="29"
+                    alt="Just Relate"
+                    style="-ms-interpolation-mode: bicubic;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;"
+                  />
+                </a>
+            </p>
+
+
+            <h2>Thank you for your form submission!</h2>
+
+              <p>
+                We will process your form submission and get back to you within a couple of hours.
+              </p>
+              <br />
+              <h3>
+                Your submitted information
+              </h3>
+              <br />
+              <table>
+                <tbody><tr>
+                  <td style="width:30%; text-align: left;"><strong style="font-weight: 500;">Form</strong></td>
+                  <td style="width:70%; text-align: left;">{{ form.title }}</td>
+                </tr>
+                <tr>
+                  <td style="width:30%; text-align: left;">
+                    <strong style="font-weight: 500;">Email</strong>
+                  </td>
+                  <td style="width:70%; text-align: left;">{{ Email }}</td>
+                </tr>
+                <tr>
+                  <td style="width:30%; text-align: left;">
+                    <strong style="font-weight: 500;">First name</strong>
+                  </td>
+                  <td style="width:70%; text-align: left;">{{ first_name }}</td>
+                </tr>
+                <tr>
+                  <td style="width:30%; text-align: left;">
+                    <strong style="font-weight: 500;">Last name</strong>
+                  </td>
+                  <td style="width:70%; text-align: left;">{{ last_name }}</td>
+                </tr>
+                <tr>
+                  <td style="width:30%; text-align: left; vertical-align: top;">
+                    <strong style="font-weight: 500;">Message </strong>
+                  </td>
+                  <td style="width:70%; text-align: left;">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
+                    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam 
+                    voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
+                    Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum 
+                    dolor sit amet.
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+              <br /> <br />
+              <p style="text-align: center;">
+                <a style="background:#495054; display: inline-block; border-radius: 5px;text-decoration:none; font-weight: bold; font-size: 16px; font-family: sans-serif; color:#ffffff; line-height: 15px; border-top: 15px solid #495054; border-bottom: 12px solid #495054; border-left: 15px solid #495054; border-right: 15px solid #495054; padding: 0; margin:0;" href="#">Confirm your information</a></p>
+              
+              <br />
+
+              <strong>Your Neoletter team</strong>
+              <p>Neoletter is a service of JustRelate</p>
+
+              <br />
+              <hr style="border: 2px solid #EAEEF3; border-bottom: 0; margin: 20px 0;" />
+              <p style="text-align: center;color: #A9B3BC;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                If you didn't submit this form, please contact us via <a href="mailto:info@neoletter.com">info@neoletter.com</a>.
+              </p>
+
+
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+    <td></td>
+  </tr>
+</table>
+
+<table class="footer-wrap">
+  <tr>
+    <td></td>
+    <td class="container">
+      <div class="content">
+        <table>
+          <tr>
+            <td align="center">
+              <p align="center"><a href="https://www.justrelate.com/?utm_source=scrivito_notification&amp;utm_medium=email">
+              <width="200" height="47" style="width:200px; height:47px"></a></p>
+              <p class="vcard">
+              <a href="https://www.justrelate.com/?utm_source=scrivito_notification&amp;utm_medium=email"><span class="org">JustRelate Group GmbH</span></a>, <a href="https://www.google.com/maps?q=Infopark+Group+GmbH,Berlin"><span class="street-address">Kitzingstr. 15</span>, <span class="postal-code">12277</span> <span class="locality">Berlin</span>, <span class="country-name">Germany</span></a><br>
+              Phone:<span class="tel">+49-30 747 993 0</span>,
+              Email: <a href="mailto:info@justrelate.com?subject=Scrivito%20Notification" class="email">info@justrelate.com</a>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+    <td></td>
+  </tr>
+</table>
+</body>
+</html>

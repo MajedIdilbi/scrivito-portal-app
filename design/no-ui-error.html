@@ -1,0 +1,44 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Stand alone - Success / Error</title>
+    <!-- CSS -->
+    <link href="http://localhost:8080/assets/index.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../src/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="../src/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../src/assets/images/favicon.ico">
+    <!-- jQuery for prototyping -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="jr-wrapper">
+      <!-- START -->
+      <div class="d-flex flex-column h-100 p-1">
+        <div class="jr-buttonbar jr-brand-neoletter"></div>
+
+          <div class="box-error m-auto p-4 pt-0" style="display: none;">
+            <div class="spaceman"></div>
+            <h3>Something went wrong</h3>
+            <p class="text-muted">Everything is fine - nobody cares about your issues.</p>
+          </div>
+
+          <div class="box-error m-auto p-4 pt-0" style="display: none;">
+            <div class="spaceman-lock"></div>
+            <h3>Permissions denied</h3>
+            <p class="text-muted">Please contact your admin.</p>
+          </div>
+          
+          <div class="box-error m-auto p-4 pt-0">
+            <div class="success-plane"></div>
+            <h3>Thank you for your form submission!</h3>
+            <p class="text-muted"> We will process your form submission and get back to you within a couple of hours.</p>
+          </div>
+ 
+      <!-- END -->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,812 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <title>NeoDXP - Activity Overview</title>
+  <!-- CSS -->
+  <link href="http://localhost:8080/assets/index.css" rel="stylesheet">
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="../src/assets/images/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="../src/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="../src/assets/images/favicon.ico">
+  <!-- jQuery for prototyping -->
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+  <!-- Bootstrap JS for prototyping -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+
+
+  </script>
+
+
+</head>
+
+<body>
+
+  <div class="jr-wrapper">
+
+
+    <!-- JR TOPBAR START -->
+    <div class="jr-topbar">
+
+
+      <div class="jr-buttonbar jr-sidebar-toggle" onClick="$(this).toggleClass('open');$('body').toggleClass('jr-sidebar-left-show');">
+        <span class="lines"></span>
+      </div>
+
+      <div class="jr-buttonbar jr-brand-neodxp"></div>
+
+
+      <div class="jr-searchbar mx-auto">
+        <div class="input-group input-group-search"><input aria-label="Search bar" name="search-bar" type="text" placeholder="search . . ." class="form-control"><button class="btn" type="submit"><i
+              class="jr-icon jr-icon-lens"></i></button></div>
+      </div>
+
+      <div class="jr-buttonbar jr-user" onClick="$(this).children('.dropdown-menu').toggleClass('show');">
+        <i class="jr-icon jr-icon-user"></i>
+        <span class="label user-name">Alexander Geßler
+          <span class="user-meta">alexander.gessler@justrelate.com</span>
+        </span>
+        <div class="dropdown-menu dropdown-menu-end">
+          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-paperplane"></i><span class="label">Make it
+              fly</span></a>
+          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-gear"></i><span class="label">Settings</span></a>
+          <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-stats"></i><span class="label">Report</span></a>
+        </div>
+      </div>
+
+
+
+
+    </div>
+    <!-- JR TOPBAR END -->
+
+    <!-- JR MAIN STAGE START -->
+    <div class="jr-main-wrapper">
+      <!-- JR SIDEBAR LEFT START -->
+      <div class="jr-sidebar-left">
+
+        <a href="index.html" class="jr-buttonbar " data-tooltip="Dashbaord" data-flow="right">
+          <i class="jr-icon jr-icon-dashboard"></i>
+          <span class="label">Dashboard</span>
+        </a>
+        <a href="dxp-activity-overview.html" class="jr-buttonbar active" data-tooltip="Schema" data-flow="right">
+          <i class="jr-icon jr-icon-activity"></i>
+          <span class="label">Activities</span>
+        </a>
+        <a href="dxp-organisations-overview.html" class="jr-buttonbar" data-tooltip="Organisations" data-flow="right">
+          <i class="jr-icon jr-icon-account"></i>
+          <span class="label">Organisations</span>
+        </a>
+        <a href="dxp-persons-overview.html" class="jr-buttonbar " data-tooltip="Persons" data-flow="right">
+          <i class="jr-icon jr-icon-contacts"></i>
+          <span class="label">Persons</span>
+        </a>
+        <a href="dxp-schema-overview.html" class="jr-buttonbar" data-tooltip="Schema" data-flow="right">
+          <i class="jr-icon jr-icon-table"></i>
+          <span class="label">Schema</span>
+        </a>
+
+
+      </div>
+      <!-- JR SIDEBAR LEFT END -->
+
+
+      <!-- JR MAIN START -->
+      <main>
+        <div class="container-fluid">
+
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Activities</li>
+            </ol>
+          </nav>
+          <div class="row">
+            <div class="col-sm-12 col-md-8">
+              <p>Watch and manage your current activities.
+              </p>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-sm-7">
+              <div class="d-flex mb-2">
+                <input type="search" class="form-control" id="search" placeholder="Search in list ...">
+
+                <button type="button" class="btn no-min-width" onclick="$(this).children('.dropdown-menu').toggleClass('show');">
+                  <span>Filter </span>
+                  <i class=" jr-icon jr-icon-filter ms-2"></i>
+
+
+                  <div class="dropdown-menu dropdown-menu-end" style="top: 30px;">
+                    <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-activity"></i><span class="label">Change
+                        Request</span></a>
+                    <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-letter"></i><span class="label">Mailing</span></a>
+                    <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-meeting"></i><span class="label">Meeting</span></a>
+                    <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-note"></i><span class="label">Note</span></a>
+                    <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-phone"></i><span class="label">Phone
+                      </span></a>
+                  </div>
+
+                </button>
+
+              </div>
+
+
+            </div>
+
+
+          </div>
+
+          <div class="d-flex mb-2">
+
+
+            <button type="button" class="btn btn-sm ms-0 no-min-width">
+              <i class="jr-icon jr-icon-activity"></i>
+              <span>Activity </span>
+              <span class="badge bg-grey">Meeting</span>
+              <i class="jr-icon jr-icon-x me-0"></i>
+            </button>
+
+
+
+            <button type="button" class="btn btn-sm ms-auto no-min-width" onclick="$(this).children('.dropdown-menu').toggleClass('show');">
+              <span>Recent first </span>
+              <i class="jr-icon jr-icon-chevron-down ms-2"></i>
+
+              <div class="dropdown-menu dropdown-menu-end" style="top: 30px;">
+                <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-circle-down"></i><span class="label">Recent
+                    first</span></a>
+                <a class="dropdown-item" href="#"><i class="jr-icon jr-icon-circle-up"></i><span class="label">Recent
+                    last</span></a>
+              </div>
+            </button>
+
+
+
+          </div>
+
+
+
+
+          <div class="nav nav-tabs boxless small mb-3">
+            <div class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab1">All Activities<span class="badge bg-grey">1972</span></div>
+            <div class="nav-link" data-bs-toggle="tab" data-bs-target="#tab2">My Activities<span class="badge bg-grey">34</span></div>
+            <div class="nav-link" data-bs-toggle="tab" data-bs-target="#tab3">Recent modified Activities<span class="badge bg-grey">342</span></div>
+          </div>
+
+
+
+          <!-- card -->
+
+          <div class="card">
+            <div class="responsive-stacked">
+
+
+              <table class="table table-hover mb-0">
+                <thead>
+                  <tr>
+                    <th><span class="text-muted">Type</span></th>
+                    <th><span class="text-muted">Title</span></th>
+                    <th><span class="text-muted">Orgnisations</span></th>
+                    <th><span class="text-muted">Persons</span></th>
+                    <th><span class="text-muted">Date</span></th>
+                    <th><span class="text-muted">State</span></th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                  <tr>
+                    <td data-label="Type">
+                      <div class="d-flex">
+                        <i class="jr-icon jr-icon-meeting" title="Meeting"></i>
+                      </div>
+                    </td>
+                    <td data-label="Title">
+                      <p class="h6 mb-0">Kick-off for all sales representative.</p>
+                    </td>
+                    <td data-label="Orgnisations">
+
+                      <span class="badge"><i class="jr-icon jr-icon-account"></i>Company AG</span>
+                    </td>
+                    <td data-label="Persons">
+                      <span class="badge"><i class="jr-icon jr-icon-user "></i>Jens Peters</span>
+                      <span class="badge"><i class="jr-icon jr-icon-user "></i>Holger Müller</span>
+                    </td>
+                    <td data-label="Date">
+                      <span class="badge"><i class="jr-icon jr-icon-time"></i>Apr 18 - 2023 - 12:13</span>
+                    </td>
+                    <td data-label="State">
+                      <span class="badge bg-grey">New</span>
+                    </td>
+                    <td class="text-end">
+                      <span class="btn-headline" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                        <i class="jr-icon jr-icon-sidebar-open" title="open in modal"></i>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="Type">
+                      <div class="d-flex">
+                        <i class="jr-icon jr-icon-note" title="Note"></i>
+                      </div>
+                    </td>
+                    <td data-label="Title">
+                      <p class="h6 mb-0">Quick note after mmeting with much more text inside...</p>
+                    </td>
+                    <td data-label="Orgnisations">
+                      <span class="badge"><i class="jr-icon jr-icon-account"></i>Company AG</span>
+                    </td>
+                    <td data-label="Persons">
+                      <span class="badge"><i class="jr-icon jr-icon-user "></i>Alexander Geßler</span>
+                    </td>
+                    <td data-label="Date">
+                      <span class="badge"><i class="jr-icon jr-icon-time"></i>Apr 19 - 2023 - 18:13</span>
+                    </td>
+                    <td data-label="State">
+                      <span class="badge bg-grey">New</span>
+                    </td>
+                    <td class="text-end">
+                      <span class="btn-headline" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                        <i class="jr-icon jr-icon-sidebar-open" title="open in modal"></i>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="Type">
+                      <div class="d-flex">
+                        <i class="jr-icon jr-icon-letter" title="Mail"></i>
+                      </div>
+                    </td>
+                    <td data-label="Title">
+                      <p class="h6 mb-0">Last call for papers</p>
+                    </td>
+                    <td data-label="Orgnisations">
+                      <span class="badge"><i class="jr-icon jr-icon-account"></i>Company AG</span>
+                    </td>
+                    <td data-label="Persons">
+                      <span class="badge"><i class="jr-icon jr-icon-user "></i>Alexander Geßler</span>
+                    </td>
+                    <td data-label="Date">
+                      <span class="badge"><i class="jr-icon jr-icon-time"></i>Apr 9 - 2023 - 18:13</span>
+                    </td>
+                    <td data-label="State">
+                      <span class="badge bg-grey">New</span>
+                    </td>
+                    <td class="text-end">
+                      <span class="btn-headline" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                        <i class="jr-icon jr-icon-sidebar-open" title="open in modal"></i>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="Type">
+                      <div class="d-flex">
+                        <i class="jr-icon jr-icon-activity" title="Change Request"></i>
+                      </div>
+                    </td>
+                    <td data-label="Title">
+                      <p class="h6 mb-0">Data change request</p>
+                    </td>
+                    <td data-label="Orgnisations">
+                      <span class="badge"><i class="jr-icon jr-icon-account"></i>Company AG</span>
+                    </td>
+                    <td data-label="Persons">
+                      <span class="badge"><i class="jr-icon jr-icon-user "></i>Alexander Geßler</span>
+                    </td>
+                    <td data-label="Date">
+                      <span class="badge"><i class="jr-icon jr-icon-time"></i>Apr 9 - 2023 - 18:13</span>
+                    </td>
+                    <td data-label="State">
+                      <span class="badge bg-yellow">pending approval</span>
+                    </td>
+                    <td class="text-end">
+                      <span class="btn-headline" data-bs-toggle="modal" data-bs-target="#jr-modal-big-test1">
+                        <i class="jr-icon jr-icon-browsers" title="open in modal"></i>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="Type">
+                      <div class="d-flex">
+                        <i class="jr-icon jr-icon-activity" title="Change Request"></i>
+                      </div>
+                    </td>
+                    <td data-label="Title">
+                      <p class="h6 mb-0">Data change request</p>
+                    </td>
+                    <td data-label="Orgnisations">
+                      <span class="badge"><i class="jr-icon jr-icon-account"></i>Company AG</span>
+                    </td>
+                    <td data-label="Persons">
+                      <span class="badge"><i class="jr-icon jr-icon-user "></i>Alexander Geßler</span>
+                    </td>
+                    <td data-label="Date">
+                      <span class="badge"><i class="jr-icon jr-icon-time"></i>Apr 9 - 2023 - 18:13</span>
+                    </td>
+                    <td data-label="State">
+                      <span class="badge bg-red">rejected approval</span>
+                    </td>
+                    <td class="text-end">
+                      <span class="btn-headline" data-bs-toggle="modal" data-bs-target="#jr-modal-big-test1">
+                        <i class="jr-icon jr-icon-browsers" title="open in modal"></i>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="Type">
+                      <div class="d-flex">
+                        <i class="jr-icon jr-icon-activity" title="Change Request"></i>
+                      </div>
+                    </td>
+                    <td data-label="Title">
+                      <p class="h6 mb-0">Data change request</p>
+                    </td>
+                    <td data-label="Orgnisations">
+                      <span class="badge"><i class="jr-icon jr-icon-account"></i>Company AG</span>
+                    </td>
+                    <td data-label="Persons">
+                      <span class="badge"><i class="jr-icon jr-icon-user "></i>Alexander Geßler</span>
+                    </td>
+                    <td data-label="Date">
+                      <span class="badge"><i class="jr-icon jr-icon-time"></i>Apr 9 - 2023 - 18:13</span>
+                    </td>
+                    <td data-label="State">
+                      <span class="badge bg-green">merged approval</span>
+                    </td>
+                    <td class="text-end">
+                      <span class="btn-headline" data-bs-toggle="modal" data-bs-target="#jr-modal-big-test1">
+                        <i class="jr-icon jr-icon-browsers" title="open in modal"></i>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="Type">
+                      <div class="d-flex">
+                        <i class="jr-icon jr-icon-phone" title="Call"></i>
+                      </div>
+                    </td>
+                    <td data-label="Title">
+                      <p class="h6 mb-0">Quick call for all</p>
+                    </td>
+                    <td data-label="Orgnisations">
+                      <span class="badge"><i class="jr-icon jr-icon-account"></i>Company AG</span>
+                    </td>
+                    <td data-label="Persons">
+                      <span class="badge"><i class="jr-icon jr-icon-user "></i>Alexander Geßler</span>
+                    </td>
+                    <td data-label="Date">
+                      <span class="badge"><i class="jr-icon jr-icon-time"></i>Apr 9 - 2023 - 18:13</span>
+                    </td>
+                    <td data-label="State">
+                      <span class="badge bg-grey">New</span>
+                    </td>
+                    <td class="text-end">
+                      <span class="btn-headline" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                        <i class="jr-icon jr-icon-sidebar-open" title="open in modal"></i>
+                      </span>
+                    </td>
+                  </tr>
+
+
+                </tbody>
+              </table>
+
+            </div>
+
+          </div>
+
+          <!-- card -->
+
+          <br>
+
+
+
+
+
+
+
+
+
+
+
+
+      </main>
+      <!-- JR MAIN END -->
+
+      <!-- JR SIDEBAR RIGHT START -->
+      <div class="jr-sidebar-right" style="display: none;">
+        <div class="jr-buttonbar" data-tooltip="Info" data-flow="left"><i class="jr-icon jr-icon-info""></i></div>
+        <div class=" jr-buttonbar" data-tooltip="Edit here" data-flow="left"><i class="jr-icon jr-icon-pen"></i></div>
+        <div class="jr-buttonbar mt-auto" data-tooltip="Lightning" data-flow="left"><i class="jr-icon jr-icon-lightning"></i></div>
+      </div>
+      <!-- JR SIDEBAR RIGHT END -->
+    </div>
+    <!-- JR MAIN STAGE END -->
+
+    <!-- JR BOTTOMBAR START -->
+    <div class="jr-bottombar justify-content-end" style="display: none;">
+      <div class="btn me-auto">Cancel</div>
+      <div class="btn disabled">Save Draft</div>
+      <div class="btn btn-primary">Define Settings</div>
+    </div>
+    <!-- JR BOTTOMBAR END -->
+
+
+
+    <ul class="dropdown-menu" id="test-dropdown-settings" data-popper-placement="right-end" style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(149px, -38px);">
+      <li><a class="dropdown-item" href="#"><i class="jr-icon jr-icon-paperplane"></i><span class="label">Action</span></a></li>
+      <li><a class="dropdown-item" href="#"><i class="jr-icon jr-icon-gear"></i><span class="label">Settings</span></a>
+      </li>
+      <li><a class="dropdown-item disabled" href="#"><i class="jr-icon jr-icon-book"></i><span class="label">Hidden
+            option</span></a></li>
+      <li><a class="dropdown-item" href="#"><i class="jr-icon jr-icon-megaphone"></i><span class="label">Start
+            campaign</span></a></li>
+      <li><a class="dropdown-item" href="#"><i class="jr-icon jr-icon-fire"></i><span class="label">Something else here
+            with too much content</span></a></li>
+      <li>
+        <hr class="dropdown-divider">
+      </li>
+      <li>
+        <div class="dropdown-item" onClick="$('body').toggleClass('jr-sidebar-left-label-hide');"><i class="jr-icon jr-icon-gear"></i><span class="label">Toggle sidebar labels</span></div>
+      </li>
+      <li>
+        <div class="dropdown-item" onClick="$('body').toggleClass('jr-zen-mode');"><i class="jr-icon jr-icon-fire"></i><span class="label">Zen Mode</span></div>
+      </li>
+
+    </ul>
+
+    <ul class="dropdown-menu" id="test-dropdown-app-switcher" data-popper-placement="top-left" style="position: absolute; inset: 0 auto auto 0 ; margin: 0px; transform: translate(0, 42px);">
+      <li>
+        <div class="dropdown-item"><span class="label jr-brand-dxhub"></span></div>
+      </li>
+      <li>
+        <div class="dropdown-item"><span class="label jr-brand-neoletter"></span></div>
+      </li>
+      <li>
+        <div class="dropdown-item"><span class="label jr-brand-scrivito"></span></div>
+      </li>
+      <li>
+        <div class="dropdown-item"><span class="label jr-brand-pisa"></span></div>
+      </li>
+    </ul>
+
+
+  </div>
+
+
+
+
+
+
+
+  <!-- JR MODAL BIG START -->
+  <div class="modal fade" id="jr-modal-big-test1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered
+          modal-dialog-scrollable">
+      <div class="modal-content border-top-darkgrey">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLabel"><i class="jr-icon jr-icon-activity"></i> Incomming change
+            request </h3>
+          <p class="mb-0">Please check and decide if old or new data should be saved.</p>
+        </div>
+        <div class="modal-body bg-lightgrey">
+
+          <div class="container-fluid">
+            <div class="row">
+
+
+              <div class="col-6">
+
+                <h4 class="text-center text-meta mt-2">Before</h4>
+
+                <h5 class="card-headline h6">
+                  Person
+                  <span class="badge bg-red ms-auto">OLD</span>
+                </h5>
+                <!-- card: start -->
+                <div class="card mb-3">
+                  <div class="card-header">
+                    <div class="d-flex">
+                      <div class="flex-shrink-0">
+                        <img class="img-profile sm cover" src="../src/assets/images/profile-man.svg" alt="person">
+                      </div>
+                      <div class="flex-grow-1 m-auto ms-3">
+                        <h3 class="h3 m-0 text-red">Hans Zimmermann</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body readonly-mode">
+                    <div class="mb-2">
+                      <label for="form-family-name" class="form-label">Family name</label>
+                      <input type="text" class="form-control-plaintext text-red" id="form-family-name" value="Zimmermann">
+                    </div>
+                    <div class="mb-2">
+                      <label for="form-first-name" class="form-label">First name</label>
+                      <input type="text" class="form-control-plaintext" id="form-first-name" value="Hans">
+                    </div>
+
+                    <div class="mb-2">
+                      <label for="form-first-name" class="form-label">Job title name</label>
+                      <input type="text" class="form-control-plaintext" id="form-first-name" value="Chief Applications Manager">
+                    </div>
+
+
+                    <div class="mb-2">
+                      <label for="form-address" class="form-label">Address</label>
+                      <div type="text" class="form-control-plaintext text-red" id="form-address">Kitzingstraße 1512277
+                        Berlin
+                        Germany</div>
+                    </div>
+
+                    <div class="mb-2">
+                      <label for="form-tel" class="form-label">Phone</label>
+                      <input type="tel" class="form-control-plaintext" id="form-tel" value="+49-30 747 993 0">
+                    </div>
+                    <div class="mb-2">
+                      <label for="form-fax" class="form-label">Fax</label>
+                      <input type="tel" class="form-control-plaintext text-red" id="form-fax" value="+49-30 747993-93">
+                    </div>
+                    <div class="mb-2">
+                      <label for="form-email" class="form-label">eMail</label>
+                      <input type="email" class="form-control-plaintext" id="form-email" value="hans.zimmermann@justrelate.com">
+                    </div>
+
+
+
+                  </div>
+                </div>
+                <!-- card: end -->
+
+
+              </div>
+
+              <div class="col-6">
+
+                <h4 class="text-center text-meta mt-2">After</h4>
+
+                <h5 class="card-headline h6">
+                  Person
+                  <span class="badge bg-green ms-auto">NEW</span>
+                </h5>
+                <!-- card: start -->
+                <div class="card mb-3">
+                  <div class="card-header">
+                    <div class="d-flex">
+                      <div class="flex-shrink-0">
+                        <img class="img-profile sm cover" src="../design/images/person-test-1.jpg" alt="person">
+                      </div>
+                      <div class="flex-grow-1 m-auto ms-3">
+                        <h3 class="h3 m-0 text-green">Hans Albert</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body readonly-mode">
+                    <div class="mb-2">
+                      <label for="form-family-name" class="form-label">Family name</label>
+                      <input type="text" class="form-control-plaintext text-green" id="form-family-name" value="Albert">
+                    </div>
+                    <div class="mb-2">
+                      <label for="form-first-name" class="form-label">First name</label>
+                      <input type="text" class="form-control-plaintext" id="form-first-name" value="Hans">
+                    </div>
+
+                    <div class="mb-2">
+                      <label for="form-first-name" class="form-label">Job title name</label>
+                      <input type="text" class="form-control-plaintext" id="form-first-name" value="Chief Applications Manager">
+                    </div>
+
+
+                    <div class="mb-2">
+                      <label for="form-address" class="form-label">Address</label>
+                      <div type="text" class="form-control-plaintext text-green" id="form-address">Joachim Str. 12 15277
+                        Berlin
+                        Germany</div>
+                    </div>
+
+                    <div class="mb-2">
+                      <label for="form-tel" class="form-label">Phone</label>
+                      <input type="tel" class="form-control-plaintext" id="form-tel" value="+49-30 747 993 0">
+                    </div>
+                    <div class="mb-2">
+                      <label for="form-fax" class="form-label">Fax</label>
+                      <input type="tel" class="form-control-plaintext text-green" id="form-fax" value="+49-30 12324-11">
+                    </div>
+                    <div class="mb-2">
+                      <label for="form-email" class="form-label">eMail</label>
+                      <input type="email" class="form-control-plaintext" id="form-email" value="hans.zimmermann@justrelate.com">
+                    </div>
+
+
+
+                  </div>
+                </div>
+                <!-- card: end -->
+
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn text-red">Leave old data </button>
+          <button type="button" class="btn text-green">Confirm new data </button>
+          <button type="button" class="btn" data-bs-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- JR MODAL BIG END -->
+
+
+
+  <!-- JR OFFCANVAS START -->
+
+  <div class="offcanvas jr-offcanvas jr-offcanvas-end border-top-darkgrey col-xl-5 col-md-6 col-sm-9" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling"
+    aria-labelledby="offcanvasScrollingLabel">
+    <div class="jr-offcanvas-header">
+      <h6 class="offcanvas-title mb-0" id="offcanvasScrollingLabel">
+        Offcanvas with body scrolling
+      </h6>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+
+    <div class="jr-offcanvas-body">
+
+      <h5 class="card-headline h6">Activity
+        <span class="btn-headline">
+          <i class="jr-icon jr-icon-pen" title="edit activity"></i>
+        </span>
+      </h5>
+      <div class="card mb-3">
+        <div class="card-body">
+          <h6>Hi! Awesome to see you again. Hit me up</h6>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+            ccusam et justo duo dolores et ea rebum.
+          </p>
+          <p>Stet clita kasd gubergren, no sea takimata san
+            ctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+            voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+            o sea takimata sanctus est Lorem ipsum dolor sit amet.
+          </p>
+          <div class="d-flex">
+            <span class="badge"><i class="jr-icon jr-icon-time"></i>Apr 18 - 2023 - 12:13</span>
+            <span class="badge ms-auto"><i class="jr-icon jr-icon-user "></i>Jens Peters</span>
+            <span class="badge"><i class="jr-icon jr-icon-account"></i>Company AG</span>
+          </div>
+
+
+        </div>
+      </div>
+
+      <h5 class="card-headline h6">Organisation
+        <span class="btn-headline">
+          <i class="jr-icon jr-icon-pen" title="edit organisation"></i>
+        </span>
+      </h5>
+      <div class="card mb-3">
+
+        <!-- jr-list-flex:start -->
+        <div class="jr-list-flex obj-list">
+
+
+          <!-- jr-list-item:start -->
+          <div class="jr-list-item" data-bs-toggle="popover" data-bs-trigger="hover focus">
+            <div class="jr-list-group shrink">
+              <img class="img-profile sm cover me-3" src="../src/assets/images/profile-organisation.svg" alt="person">
+            </div>
+            <div class="jr-list-group grow">
+              <p class="h5 mb-0">Schlemmer AG</p>
+              <p class="text-small text-meta mb-0">Manufacturing</p>
+            </div>
+            <div class="jr-list-group shrink">
+              <span class="btn-headline">
+                <i class="jr-icon jr-icon-trash" title="delete connection"></i>
+              </span>
+            </div>
+          </div>
+          <!-- jr-list-item:end -->
+          <!-- jr-list-item:start -->
+          <div class="jr-list-item" data-bs-toggle="popover" data-bs-trigger="hover focus">
+            <div class="jr-list-group shrink">
+              <img class="img-profile xs cover me-3" src="../src/assets/images/profile-man.svg" alt="person">
+            </div>
+            <div class="jr-list-group grow">
+              <p class="h5 mb-0">Horst Schlemmer</p>
+            </div>
+            <div class="jr-list-group shrink">
+              <span class="btn-headline">
+                <i class="jr-icon jr-icon-trash" title="delete connection"></i>
+              </span>
+            </div>
+          </div>
+          <!-- jr-list-item:end -->
+          <!-- jr-list-item:start -->
+          <div class="jr-list-item" data-bs-toggle="popover" data-bs-trigger="hover focus">
+            <div class="jr-list-group shrink">
+              <i class="jr-icon jr-icon-phone-in-big me-3"></i>
+            </div>
+
+            <div class="jr-list-group grow">
+              <p class="h5 mb-0">Schlemmer AG</p>
+              <p class="text-small text-meta mb-0">Manufacturing</p>
+            </div>
+            <div class="jr-list-group shrink">
+              <span class="btn-headline">
+                <i class="jr-icon jr-icon-trash" title="delete connection"></i>
+              </span>
+            </div>
+          </div>
+          <!-- jr-list-item:end -->
+
+
+        </div>
+        <!-- jr-list-flex:end -->
+
+        <div class="card-footer readonly-mode"">
+          <button type=" button" class=" btn btn-sm m-0" onclick="$(this).next().show();$(this).hide();">
+          <i class="jr-icon jr-icon-plus"></i>
+          <span>Add Person</span>
+          </button>
+          <div class="input-group input-group-sm mt-2 mb-2" style="display: none;">
+            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn" type="button" id="button-addon2">Add Person</button>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- Popover TEST -->
+
+
+      <div class="popover bs-popover-top" role="tooltip" style="top: 170px; left: 10px; display: none;">
+        <div class="popover-arrow"></div>
+        <div class="popover-body" id="test-content">
+
+          <div class="d-flex">
+            <div class="flex-shrink-0">
+              <img class="img-profile sm cover" src="images/person-test-1.jpg" alt="person">
+            </div>
+            <div class="flex-grow-1 m-auto ms-3">
+              <h3 class="h3 m-0">Horst Schlemmer</h3>
+              <h6 class="mb-0">Schlemmer AG</h6>
+              <span class="text-small text-meta"> CEO</span>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <!-- Popover TEST -->
+
+
+
+    </div>
+
+    <div class=" jr-offcanvas-footer">
+      <button type="button" class="btn btn-sm ms-auto m-0" data-bs-dismiss="offcanvas">close</button>
+    </div>
+  </div>
+
+
+  </div>
+  <!-- JR OFFCANVAS END -->
+
+
+
+
+</body>
+
+</html>
