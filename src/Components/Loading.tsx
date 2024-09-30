@@ -7,7 +7,7 @@ export const Loading = connect(function Loading() {
         <div className="hidden-xs hidden-sm">
           <br /> <br />
         </div>
-        <div className="skeleton" style={{ minHeight: 200 }}></div>
+        <div className="skeleton" style={{ minHeight: 200 }} data-testid="loading-skeleton"></div>
       </div>
 
       <div className="hidden-xs hidden-sm">
